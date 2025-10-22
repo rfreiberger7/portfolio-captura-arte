@@ -1,34 +1,49 @@
-import { Quote } from "lucide-react";
+import photographerImg from "@/assets/photographer-portrait.jpg";
+import { Camera, Heart, Sparkles } from "lucide-react";
 
 const About = () => {
+  const values = [
+    { icon: Sparkles, title: "Criatividade", description: "Cada ensaio é único e personalizado" },
+    { icon: Heart, title: "Sensibilidade", description: "Capturo a essência de cada momento" },
+    { icon: Camera, title: "Técnica", description: "Equipamento profissional e experiência" }
+  ];
+
   return (
     <section id="about" className="py-20 bg-gradient-card">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-light text-center mb-4 text-foreground animate-fade-in">
-            Transformando momentos em memórias
-          </h2>
-          <div className="w-24 h-0.5 bg-primary mx-auto mb-12"></div>
-          
-          <p className="text-lg text-center text-muted-foreground mb-16 animate-fade-in">
-            Descubra o único estúdio fotográfico que vai além da fotografia!
-          </p>
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="relative animate-fade-in">
+            <div className="relative overflow-hidden rounded-2xl shadow-glow">
+              <img src={photographerImg} alt="Manu - Fotógrafa" className="w-full h-auto object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+            </div>
+          </div>
 
-          <div className="relative bg-card rounded-2xl p-8 md:p-12 shadow-soft animate-scale-in">
-            <Quote className="absolute top-6 left-6 h-12 w-12 text-primary/20" />
-            <div className="relative z-10">
-              <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6 italic">
-                "Aqui cada detalhe é pensado para que você e sua Família tenham uma experiência além da fotografia. Um ambiente acolhedor, profissionais apaixonados por pessoas, famílias e principalmente por bebês."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-0.5 bg-secondary"></div>
-                <p className="text-muted-foreground font-medium">
-                  Pri Oliveira
-                  <span className="block text-sm text-muted-foreground/70">
-                    Proprietária e Fotógrafa
-                  </span>
-                </p>
-              </div>
+          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Sobre Mim</h2>
+            <div className="w-24 h-1 bg-primary mb-6"></div>
+            <p className="text-lg text-muted-foreground mb-6">
+              Sou Manu, fotógrafa apaixonada por capturar emoções autênticas e eternizar histórias através da luz.
+            </p>
+            <p className="text-base text-muted-foreground mb-8">
+              Cada sessão é uma oportunidade única de criar arte que conecta pessoas e preserva memórias.
+            </p>
+
+            <div className="grid grid-cols-1 gap-4">
+              {values.map((value, index) => {
+                const Icon = value.icon;
+                return (
+                  <div key={value.title} className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground mb-1">{value.title}</h3>
+                      <p className="text-sm text-muted-foreground">{value.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
