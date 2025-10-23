@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const Contact = () => {
   return (
     <>
-      <section id="contact" className="py-20 bg-background">
+      <section id="contact" className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">Entre em Contato</h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>

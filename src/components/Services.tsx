@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gradient-card">
+    <section id="services" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground animate-fade-in">
           Serviços
