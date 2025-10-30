@@ -1,45 +1,41 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import personalImg from "@/assets/portfolio-personal.jpg";
-import weddingImg from "@/assets/portfolio-wedding.jpg";
-import corporateImg from "@/assets/portfolio-corporate.jpg";
-import eventImg from "@/assets/portfolio-event.jpg";
-import coupleImg from "@/assets/portfolio-couple.jpg";
+import { portfolioImages } from "@/config/images";
 
 const portfolioItems = [
   {
     id: 1,
-    image: personalImg,
+    image: portfolioImages.personal,
     title: "Ensaio Pessoal",
     category: "Ensaios"
   },
   {
     id: 2,
-    image: weddingImg,
+    image: portfolioImages.wedding,
     title: "Casamento",
     category: "Casamentos"
   },
   {
     id: 3,
-    image: corporateImg,
+    image: portfolioImages.corporate,
     title: "Retrato Profissional",
     category: "Retratos"
   },
   {
     id: 4,
-    image: eventImg,
+    image: portfolioImages.event,
     title: "Evento Familiar",
     category: "Eventos"
   },
   {
     id: 5,
-    image: coupleImg,
+    image: portfolioImages.couple,
     title: "Ensaio Casal",
     category: "Ensaios"
   },
   {
     id: 6,
-    image: personalImg,
+    image: portfolioImages.personal,
     title: "Retrato Artístico",
     category: "Retratos"
   }

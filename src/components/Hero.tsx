@@ -1,19 +1,14 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import newbornImg from "@/assets/hero-newborn.jpg";
-import gestanteImg from "@/assets/gestante.jpg";
-import infantilImg from "@/assets/infantil.jpg";
-import eventosImg from "@/assets/eventos.jpg";
-import geekImg from "@/assets/geek.jpg";
-import acompanhamentoImg from "@/assets/acompanhamento.jpg";
+import { heroImages } from "@/config/images";
 
 const categories = [
-  { id: 1, image: eventosImg, title: "Eventos", link: "#portfolio" },
-  { id: 2, image: gestanteImg, title: "Gestante", link: "#portfolio" },
-  { id: 3, image: newbornImg, title: "Newborn", link: "#portfolio" },
-  { id: 4, image: infantilImg, title: "Infantil", link: "#portfolio" },
-  { id: 5, image: geekImg, title: "Geek", link: "#portfolio" },
-  { id: 6, image: acompanhamentoImg, title: "Acompanhamento Infantil", link: "#portfolio" }
+  { id: 1, image: heroImages.eventos, title: "Eventos", link: "#portfolio" },
+  { id: 2, image: heroImages.gestante, title: "Gestante", link: "#portfolio" },
+  { id: 3, image: heroImages.newborn, title: "Newborn", link: "#portfolio" },
+  { id: 4, image: heroImages.infantil, title: "Infantil", link: "#portfolio" },
+  { id: 5, image: heroImages.geek, title: "Geek", link: "#portfolio" },
+  { id: 6, image: heroImages.acompanhamento, title: "Acompanhamento Infantil", link: "#portfolio" }
 ];
 
 const Hero = () => {

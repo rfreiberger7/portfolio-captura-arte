@@ -1,4 +1,4 @@
-import photographerImg from "@/assets/photographer-portrait.jpg";
+import { aboutImages } from "@/config/images";
 import { Camera, Heart, Sparkles } from "lucide-react";
 
 const About = () => {
@@ -14,7 +14,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="relative animate-fade-in">
             <div className="relative overflow-hidden rounded-2xl shadow-glow">
-              <img src={photographerImg} alt="Manu - Fotógrafa" className="w-full h-auto object-cover" />
+              <img src={aboutImages.photographer} alt="Manu - Fotógrafa" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
             </div>
           </div>
