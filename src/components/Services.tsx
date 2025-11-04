@@ -1,25 +1,35 @@
-import { Camera, Heart, Users, Briefcase } from "lucide-react";
+import { Camera, Heart, Users, Briefcase, Baby, Sparkles } from "lucide-react";
 
 const services = [
   {
+    icon: Heart,
+    title: "Ensaios Gestante",
+    description: "Milk Bath, ensaios externos e estúdio. Eternizando a beleza da maternidade em cada imagem."
+  },
+  {
+    icon: Baby,
+    title: "Newborn & Bebês",
+    description: "Newborn, mesversário e smash the cake. Registrando os primeiros momentos da vida com delicadeza."
+  },
+  {
     icon: Camera,
-    title: "Ensaio Pessoal",
-    description: "Registros únicos que refletem sua essência e personalidade com autenticidade."
+    title: "Ensaios Individuais",
+    description: "Feminino, formatura e profissional. Imagens que refletem sua essência e personalidade."
+  },
+  {
+    icon: Sparkles,
+    title: "Pré Wedding",
+    description: "Ensaios românticos que contam a história do casal antes do grande dia."
   },
   {
     icon: Heart,
-    title: "Casamentos",
-    description: "Emoção e beleza em cada detalhe do seu dia mais especial."
+    title: "Cobertura de Casamento",
+    description: "Emoção e beleza em cada detalhe do seu dia mais especial, do início ao fim."
   },
   {
     icon: Users,
-    title: "Eventos",
-    description: "Cobertura completa com olhar artístico para momentos inesquecíveis."
-  },
-  {
-    icon: Briefcase,
-    title: "Retratos Profissionais",
-    description: "Imagens que comunicam confiança e profissionalismo."
+    title: "Cobertura de Aniversário",
+    description: "Registro completo da festa, capturando alegria e momentos inesquecíveis da celebração."
   }
 ];
 
@@ -32,7 +42,7 @@ const Services = () => {
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

@@ -4,20 +4,18 @@
 // Para trocar as imagens do site, substitua os arquivos em src/assets
 // ou atualize os imports abaixo com os novos arquivos
 
-// Imagens do Hero (Carrossel principal)
-import eventosImg from "@/assets/eventos.jpg";
+// Imagens do Hero (Carrossel principal) e Portfólio
+import milkBathGestanteImg from "@/assets/milk-bath-gestante.jpg";
+import femininoImg from "@/assets/feminino.jpg";
+import formaturaImg from "@/assets/formatura.jpg";
 import gestanteImg from "@/assets/gestante.jpg";
+import mesversarioImg from "@/assets/mesversario.jpg";
 import newbornImg from "@/assets/hero-newborn.jpg";
-import infantilImg from "@/assets/infantil.jpg";
-import geekImg from "@/assets/geek.jpg";
-import acompanhamentoImg from "@/assets/acompanhamento.jpg";
-
-// Imagens do Portfólio
-import personalImg from "@/assets/portfolio-personal.jpg";
-import weddingImg from "@/assets/portfolio-wedding.jpg";
-import corporateImg from "@/assets/portfolio-corporate.jpg";
-import eventImg from "@/assets/portfolio-event.jpg";
-import coupleImg from "@/assets/portfolio-couple.jpg";
+import preWeddingImg from "@/assets/pre-wedding.jpg";
+import profissionalImg from "@/assets/profissional.jpg";
+import smashImg from "@/assets/smash.jpg";
+import coberturaCasamentoImg from "@/assets/cobertura-casamento.jpg";
+import coberturaAniversarioImg from "@/assets/cobertura-aniversario.jpg";
 
 // Imagens da seção Sobre
 import photographerImg from "@/assets/photographer-portrait.jpg";
@@ -26,20 +24,31 @@ import photographerImg from "@/assets/photographer-portrait.jpg";
 import heroMainImg from "@/assets/hero-main.jpg";
 
 export const heroImages = {
-  eventos: eventosImg,
+  milkBathGestante: milkBathGestanteImg,
+  feminino: femininoImg,
+  formatura: formaturaImg,
   gestante: gestanteImg,
+  mesversario: mesversarioImg,
   newborn: newbornImg,
-  infantil: infantilImg,
-  geek: geekImg,
-  acompanhamento: acompanhamentoImg,
+  preWedding: preWeddingImg,
+  profissional: profissionalImg,
+  smash: smashImg,
+  coberturaCasamento: coberturaCasamentoImg,
+  coberturaAniversario: coberturaAniversarioImg,
 };
 
 export const portfolioImages = {
-  personal: personalImg,
-  wedding: weddingImg,
-  corporate: corporateImg,
-  event: eventImg,
-  couple: coupleImg,
+  milkBathGestante: milkBathGestanteImg,
+  feminino: femininoImg,
+  formatura: formaturaImg,
+  gestante: gestanteImg,
+  mesversario: mesversarioImg,
+  newborn: newbornImg,
+  preWedding: preWeddingImg,
+  profissional: profissionalImg,
+  smash: smashImg,
+  coberturaCasamento: coberturaCasamentoImg,
+  coberturaAniversario: coberturaAniversarioImg,
 };
 
 export const aboutImages = {

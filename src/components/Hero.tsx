@@ -3,12 +3,17 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { heroImages } from "@/config/images";
 
 const categories = [
-  { id: 1, image: heroImages.eventos, title: "Eventos", link: "#portfolio" },
-  { id: 2, image: heroImages.gestante, title: "Gestante", link: "#portfolio" },
-  { id: 3, image: heroImages.newborn, title: "Newborn", link: "#portfolio" },
-  { id: 4, image: heroImages.infantil, title: "Infantil", link: "#portfolio" },
-  { id: 5, image: heroImages.geek, title: "Geek", link: "#portfolio" },
-  { id: 6, image: heroImages.acompanhamento, title: "Acompanhamento Infantil", link: "#portfolio" }
+  { id: 1, image: heroImages.milkBathGestante, title: "Ensaio Milk Bath Gestante", link: "#portfolio" },
+  { id: 2, image: heroImages.feminino, title: "Feminino", link: "#portfolio" },
+  { id: 3, image: heroImages.formatura, title: "Formatura", link: "#portfolio" },
+  { id: 4, image: heroImages.gestante, title: "Gestante", link: "#portfolio" },
+  { id: 5, image: heroImages.mesversario, title: "Mesversário", link: "#portfolio" },
+  { id: 6, image: heroImages.newborn, title: "Newborn", link: "#portfolio" },
+  { id: 7, image: heroImages.preWedding, title: "Ensaio Pré Wedding", link: "#portfolio" },
+  { id: 8, image: heroImages.profissional, title: "Profissional", link: "#portfolio" },
+  { id: 9, image: heroImages.smash, title: "Smash", link: "#portfolio" },
+  { id: 10, image: heroImages.coberturaCasamento, title: "Cobertura Casamento", link: "#portfolio" },
+  { id: 11, image: heroImages.coberturaAniversario, title: "Cobertura de Aniversário", link: "#portfolio" }
 ];
 
 const Hero = () => {
