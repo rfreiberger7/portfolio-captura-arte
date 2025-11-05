@@ -10,7 +10,7 @@ const Navbar = () => {
     { label: "Sobre", href: "#about" },
     { label: "Portfólio", href: "#portfolio" },
     { label: "Serviços", href: "#services" },
-    { label: "Loja", href: "/loja" },
+    { label: "Pagamento", href: "#payment" },
     { label: "Contato", href: "#contact" },
   ];
 
@@ -43,13 +43,29 @@ const Navbar = () => {
             
             {/* Social Icons */}
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/studio.manufotografias/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="mailto:studiomanufotografias@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Email"
+              >
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://wa.me/5541997914430"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="WhatsApp"
+              >
                 <Phone className="h-5 w-5" />
               </a>
             </div>
@@ -78,13 +94,29 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-4 mt-4 pt-4 border-t border-border">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/studio.manufotografias/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="mailto:studiomanufotografias@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Email"
+              >
                 <Mail className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://wa.me/5541997914430"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="WhatsApp"
+              >
                 <Phone className="h-5 w-5" />
               </a>
             </div>

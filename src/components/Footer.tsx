@@ -7,13 +7,29 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center">
         <img src={logoImg} alt="Studio Manu Fotografias" className="h-16 w-auto mx-auto mb-6" />
         <div className="flex justify-center gap-4 mb-6">
-          <a href="#" className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all">
+          <a 
+            href="https://www.instagram.com/studio.manufotografias/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all"
+            aria-label="Instagram"
+          >
             <Instagram className="h-5 w-5 text-foreground" />
           </a>
-          <a href="#" className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all">
+          <a 
+            href="mailto:studiomanufotografias@gmail.com"
+            className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all"
+            aria-label="Email"
+          >
             <Mail className="h-5 w-5 text-foreground" />
           </a>
-          <a href="#" className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all">
+          <a 
+            href="https://wa.me/5541997914430"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-background border border-border rounded-full hover:border-primary transition-all"
+            aria-label="WhatsApp"
+          >
             <Phone className="h-5 w-5 text-foreground" />
           </a>
         </div>
