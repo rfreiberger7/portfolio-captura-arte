@@ -2,33 +2,76 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { portfolioImages } from "@/config/images";
 
+// Criar array de items do portfólio com todas as imagens de cada categoria
 const portfolioItems = [
-  { id: 1, image: portfolioImages.milkBathGestante, title: "Ensaio Milk Bath Gestante", category: "milkBathGestante" },
-  { id: 2, image: portfolioImages.feminino, title: "Feminino", category: "feminino" },
-  { id: 3, image: portfolioImages.formatura, title: "Formatura", category: "formatura" },
-  { id: 4, image: portfolioImages.gestante, title: "Gestante", category: "gestante" },
-  { id: 5, image: portfolioImages.mesversario, title: "Mesversário", category: "mesversario" },
-  { id: 6, image: portfolioImages.newborn, title: "Newborn", category: "newborn" },
-  { id: 7, image: portfolioImages.preWedding, title: "Ensaio Pré Wedding", category: "preWedding" },
-  { id: 8, image: portfolioImages.profissional, title: "Profissional", category: "profissional" },
-  { id: 9, image: portfolioImages.smash, title: "Smash", category: "smash" },
-  { id: 10, image: portfolioImages.coberturaCasamento, title: "Cobertura Casamento", category: "coberturaCasamento" },
-  { id: 11, image: portfolioImages.coberturaAniversario, title: "Cobertura de Aniversário", category: "coberturaAniversario" },
+  // Gestante
+  ...portfolioImages.gestante.map((img, idx) => ({
+    id: `gestante-${idx}`,
+    image: img,
+    title: "Gestante",
+    category: "gestante"
+  })),
+  // Feminino
+  ...portfolioImages.feminino.map((img, idx) => ({
+    id: `feminino-${idx}`,
+    image: img,
+    title: "Feminino",
+    category: "feminino"
+  })),
+  // Mesversário
+  ...portfolioImages.mesversario.map((img, idx) => ({
+    id: `mesversario-${idx}`,
+    image: img,
+    title: "Mesversário",
+    category: "mesversario"
+  })),
+  // Formatura
+  ...portfolioImages.formatura.map((img, idx) => ({
+    id: `formatura-${idx}`,
+    image: img,
+    title: "Formatura",
+    category: "formatura"
+  })),
+  // Newborn
+  ...portfolioImages.newborn.map((img, idx) => ({
+    id: `newborn-${idx}`,
+    image: img,
+    title: "Newborn",
+    category: "newborn"
+  })),
+  // Profissional
+  ...portfolioImages.profissional.map((img, idx) => ({
+    id: `profissional-${idx}`,
+    image: img,
+    title: "Profissional",
+    category: "profissional"
+  })),
+  // Pré Wedding
+  ...portfolioImages.preWedding.map((img, idx) => ({
+    id: `preWedding-${idx}`,
+    image: img,
+    title: "Ensaio Pré Wedding",
+    category: "preWedding"
+  })),
+  // Smash
+  ...portfolioImages.smash.map((img, idx) => ({
+    id: `smash-${idx}`,
+    image: img,
+    title: "Smash",
+    category: "smash"
+  })),
 ];
 
 const categories = [
   { id: "all", label: "Todos" },
-  { id: "milkBathGestante", label: "Milk Bath Gestante" },
   { id: "feminino", label: "Feminino" },
-  { id: "formatura", label: "Formatura" },
   { id: "gestante", label: "Gestante" },
   { id: "mesversario", label: "Mesversário" },
   { id: "newborn", label: "Newborn" },
-  { id: "preWedding", label: "Pré Wedding" },
+  { id: "formatura", label: "Formatura" },
   { id: "profissional", label: "Profissional" },
+  { id: "preWedding", label: "Pré Wedding" },
   { id: "smash", label: "Smash" },
-  { id: "coberturaCasamento", label: "Cobertura Casamento" },
-  { id: "coberturaAniversario", label: "Cobertura Aniversário" },
 ];
 
 const Portfolio = () => {

@@ -28,15 +28,23 @@ const Contact = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-glow">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Enviar WhatsApp
-            </Button>
+            <a href="https://wa.me/5541999791430" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-glow">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Enviar WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      <a href="https://wa.me/5511999999999" className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-glow">
+      <a 
+        href="https://wa.me/5541999791430" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary/90 text-primary-foreground p-4 rounded-full shadow-glow transition-all"
+        aria-label="WhatsApp"
+      >
         <MessageCircle className="h-6 w-6" />
       </a>
     </>

@@ -2,29 +2,15 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { heroImages } from "@/config/images";
 
-const categories = [
-  { id: 1, image: heroImages.milkBathGestante, title: "Ensaio Milk Bath Gestante", link: "#portfolio" },
-  { id: 2, image: heroImages.feminino, title: "Feminino", link: "#portfolio" },
-  { id: 3, image: heroImages.formatura, title: "Formatura", link: "#portfolio" },
-  { id: 4, image: heroImages.gestante, title: "Gestante", link: "#portfolio" },
-  { id: 5, image: heroImages.mesversario, title: "Mesversário", link: "#portfolio" },
-  { id: 6, image: heroImages.newborn, title: "Newborn", link: "#portfolio" },
-  { id: 7, image: heroImages.preWedding, title: "Ensaio Pré Wedding", link: "#portfolio" },
-  { id: 8, image: heroImages.profissional, title: "Profissional", link: "#portfolio" },
-  { id: 9, image: heroImages.smash, title: "Smash", link: "#portfolio" },
-  { id: 10, image: heroImages.coberturaCasamento, title: "Cobertura Casamento", link: "#portfolio" },
-  { id: 11, image: heroImages.coberturaAniversario, title: "Cobertura de Aniversário", link: "#portfolio" }
-];
-
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % categories.length);
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + categories.length) % categories.length);
+    setCurrentIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
 
   useEffect(() => {
@@ -35,8 +21,8 @@ const Hero = () => {
   const getVisibleSlides = () => {
     const visible = [];
     for (let i = -1; i <= 1; i++) {
-      const index = (currentIndex + i + categories.length) % categories.length;
-      visible.push({ ...categories[index], offset: i });
+      const index = (currentIndex + i + heroImages.length) % heroImages.length;
+      visible.push({ ...heroImages[index], offset: i, id: index });
     }
     return visible;
   };
@@ -45,28 +31,28 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-32 pb-20">
       <div className="container mx-auto px-4">
         <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
-          {getVisibleSlides().map((category, idx) => (
+          {getVisibleSlides().map((item) => (
             <div
-              key={category.id}
+              key={item.id}
               className="absolute transition-all duration-700 ease-in-out"
               style={{
-                transform: `translateX(${category.offset * 100}%) scale(${category.offset === 0 ? 1 : 0.8})`,
-                zIndex: category.offset === 0 ? 10 : 5,
-                opacity: category.offset === 0 ? 1 : 0.5,
+                transform: `translateX(${item.offset * 100}%) scale(${item.offset === 0 ? 1 : 0.8})`,
+                zIndex: item.offset === 0 ? 10 : 5,
+                opacity: item.offset === 0 ? 1 : 0.5,
               }}
             >
               <div className="relative w-[80vw] md:w-[500px] lg:w-[700px] aspect-[4/3] rounded-lg overflow-hidden shadow-glow">
                 <img
-                  src={category.image}
-                  alt={category.title}
+                  src={item.image}
+                  alt={item.title}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent flex items-end justify-center pb-8">
                   <a
-                    href={category.link}
+                    href="#portfolio"
                     className="text-2xl md:text-3xl font-light text-foreground hover:text-primary transition-colors"
                   >
-                    {category.title}
+                    {item.title}
                   </a>
                 </div>
               </div>
@@ -91,7 +77,7 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-2 mt-8">
-          {categories.map((_, idx) => (
+          {heroImages.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
