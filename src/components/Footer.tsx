@@ -33,10 +33,11 @@ const Footer = () => {
             <Phone className="h-5 w-5 text-foreground" />
           </a>
         </div>
-        <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-          © {new Date().getFullYear()} Studio Manu Fotografias
-          <span>—</span>
-          <span className="flex items-center gap-1">Feito com <Heart className="h-4 w-4 text-primary fill-primary" /></span>
+        <p className="text-muted-foreground text-sm">
+          © {new Date().getFullYear()} Studio Manu Fotografias. Todos os direitos reservados.
+        </p>
+        <p className="text-muted-foreground text-xs mt-2 flex items-center justify-center gap-1">
+          Feito com <Heart className="h-3 w-3 text-primary fill-primary inline" /> por Studio Manu Fotografias
         </p>
       </div>
     </footer>

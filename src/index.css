@@ -17,31 +17,31 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 0 84% 60%;
+    --primary: 40 30% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 94%;
+    --secondary: 30 15% 90%;
     --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 92%;
+    --muted: 30 10% 92%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 84% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 40 50% 60%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 0 84% 60%;
+    --border: 30 10% 88%;
+    --input: 30 10% 88%;
+    --ring: 40 30% 50%;
 
     --radius: 0.5rem;
     
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98% / 0.95), hsl(0 0% 96% / 0.98));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 98% / 0.95), hsl(30 15% 96% / 0.98));
     --gradient-card: linear-gradient(to bottom, hsl(0 0% 97%), hsl(0 0% 99%));
-    --shadow-soft: 0 4px 30px -2px hsl(0 84% 60% / 0.15);
-    --shadow-glow: 0 0 40px hsl(0 84% 60% / 0.25);
+    --shadow-soft: 0 4px 30px -2px hsl(40 30% 50% / 0.15);
+    --shadow-glow: 0 0 40px hsl(40 50% 60% / 0.25);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -111,7 +111,8 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
   }
   
   html {
