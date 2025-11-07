@@ -14,14 +14,8 @@ const WhatsAppButton = () => {
       setShowWelcome(true);
     }, 15000);
 
-    // Esconde o balão após 23 segundos (15s + 8s)
-    const hideTimer = setTimeout(() => {
-      setShowWelcome(false);
-    }, 23000);
-
     return () => {
       clearTimeout(timer);
-      clearTimeout(hideTimer);
     };
   }, []);
 
