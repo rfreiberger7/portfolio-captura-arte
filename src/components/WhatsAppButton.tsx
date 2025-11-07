@@ -9,15 +9,15 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   useEffect(() => {
-    // Mostra o balão de boas-vindas após 2 segundos
+    // Mostra o balão de boas-vindas após 15 segundos
     const timer = setTimeout(() => {
       setShowWelcome(true);
-    }, 2000);
+    }, 15000);
 
-    // Esconde o balão após 8 segundos
+    // Esconde o balão após 23 segundos (15s + 8s)
     const hideTimer = setTimeout(() => {
       setShowWelcome(false);
-    }, 10000);
+    }, 23000);
 
     return () => {
       clearTimeout(timer);
