@@ -92,7 +92,7 @@ const Gallery = () => {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-32 pb-12 bg-gradient-hero">
+      <section className="pt-24 pb-8 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
@@ -103,11 +103,11 @@ const Gallery = () => {
           </button>
           
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2 animate-fade-in">
+            <h1 className="text-2xl md:text-3xl font-semibold text-foreground mb-3 animate-fade-in">
               Galeria Completa
             </h1>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-16 h-0.5 bg-primary mx-auto mb-4"></div>
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Explore todas as categorias de ensaios fotográficos
             </p>
           </div>
@@ -115,9 +115,9 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-background md:sticky md:top-20 z-40 border-b border-border shadow-sm">
+      <section className="py-4 bg-background/95 backdrop-blur-sm sticky top-0 z-40 border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -136,22 +136,22 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded cursor-pointer animate-fade-in hover:opacity-80 transition-opacity"
+                className="group relative overflow-hidden rounded-lg cursor-pointer animate-fade-in transition-all duration-300 hover:shadow-glow"
                 style={{ animationDelay: `${index * 0.02}s` }}
                 onClick={() => setLightboxImage(item)}
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden bg-muted">
                   <img
                     src={item.image}
                     alt={`${item.title} - Foto ${index + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               </div>
