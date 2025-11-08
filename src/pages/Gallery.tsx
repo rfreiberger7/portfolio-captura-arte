@@ -3,6 +3,7 @@ import { X, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { portfolioImages } from "@/config/images";
 
@@ -92,7 +93,7 @@ const Gallery = () => {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-24 pb-8 bg-gradient-hero">
+      <section className="pt-32 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
@@ -103,11 +104,11 @@ const Gallery = () => {
           </button>
           
           <div className="text-center">
-            <h1 className="text-2xl md:text-3xl font-semibold text-foreground mb-3 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2 animate-fade-in">
               Galeria Completa
             </h1>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-4"></div>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Explore todas as categorias de ensaios fotográficos
             </p>
           </div>
@@ -115,9 +116,9 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-4 bg-background/95 backdrop-blur-sm sticky top-0 z-40 border-b border-border shadow-sm">
+      <section className="py-8 bg-background sticky top-20 z-40 border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -136,23 +137,28 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-8">
+      <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg cursor-pointer animate-fade-in transition-all duration-300 hover:shadow-glow"
-                style={{ animationDelay: `${index * 0.02}s` }}
+                className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer animate-fade-in"
+                style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => setLightboxImage(item)}
               >
-                <div className="aspect-square overflow-hidden bg-muted">
+                <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={item.image}
                     alt={`${item.title} - Foto ${index + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
+                </div>
+                
+                {/* Marca d'água - Studio Manu Fotografias */}
+                <div className="absolute bottom-4 right-4 text-white/80 text-xs font-light bg-background/20 backdrop-blur-sm px-2 py-1 rounded">
+                  Studio Manu Fotografias
                 </div>
               </div>
             ))}
@@ -167,43 +173,10 @@ const Gallery = () => {
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors z-10 p-2 bg-card/50 rounded-full"
+            className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors z-10"
             onClick={() => setLightboxImage(null)}
-            aria-label="Fechar"
           >
-            <X className="h-6 w-6" />
-          </button>
-          
-          {/* Navegação anterior */}
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground hover:text-primary transition-colors z-10 p-3 bg-card/80 rounded-full"
-            onClick={(e) => {
-              e.stopPropagation();
-              const currentIndex = filteredItems.findIndex(item => item.id === lightboxImage.id);
-              const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
-              setLightboxImage(filteredItems[prevIndex]);
-            }}
-            aria-label="Foto anterior"
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          
-          {/* Navegação próxima */}
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-foreground hover:text-primary transition-colors z-10 p-3 bg-card/80 rounded-full"
-            onClick={(e) => {
-              e.stopPropagation();
-              const currentIndex = filteredItems.findIndex(item => item.id === lightboxImage.id);
-              const nextIndex = (currentIndex + 1) % filteredItems.length;
-              setLightboxImage(filteredItems[nextIndex]);
-            }}
-            aria-label="Próxima foto"
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <X className="h-8 w-8" />
           </button>
           
           <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
@@ -213,14 +186,12 @@ const Gallery = () => {
               loading="lazy"
               className="w-full h-auto rounded-lg shadow-glow"
             />
-            <div className="text-center mt-4 text-muted-foreground text-sm">
-              Studio Manu Fotografias
-            </div>
           </div>
         </div>
       )}
 
       <Footer />
+      <ScrollToTop />
       <WhatsAppButton />
     </div>
   );
