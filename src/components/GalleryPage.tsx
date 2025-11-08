@@ -3,7 +3,6 @@ import { X, ArrowLeft, Instagram } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import ScrollToTop from "./ScrollToTop";
 import WhatsAppButton from "./WhatsAppButton";
 
 interface GalleryPageProps {
@@ -109,7 +108,6 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       )}
 
       <Footer />
-      <ScrollToTop />
       <WhatsAppButton />
     </div>
   );

@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle, X, Minus } from "lucide-react";
 import photographerPortrait from "@/assets/photographer-portrait.jpg";
 
 const WhatsAppButton = () => {
   const [showWelcome, setShowWelcome] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
   const whatsappNumber = "5541999791430";
   const whatsappMessage = encodeURIComponent("Olá! Quero saber mais sobre um ensaio fotográfico.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   useEffect(() => {
-    // Mostra o balão de boas-vindas após 15 segundos
     const timer = setTimeout(() => {
       setShowWelcome(true);
     }, 15000);
@@ -18,6 +18,18 @@ const WhatsAppButton = () => {
       clearTimeout(timer);
     };
   }, []);
+
+  if (isMinimized) {
+    return (
+      <button
+        onClick={() => setIsMinimized(false)}
+        className="fixed bottom-6 right-6 z-[100] bg-[#25D366] hover:bg-[#20BA5A] text-white p-3 rounded-full shadow-glow transition-all duration-300"
+        aria-label="Mostrar WhatsApp"
+      >
+        <MessageCircle className="h-5 w-5" />
+      </button>
+    );
+  }
 
   return (
     <>
@@ -55,15 +67,25 @@ const WhatsAppButton = () => {
       )}
 
       {/* Botão do WhatsApp */}
-      <a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-[100] bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-glow transition-all duration-300 animate-[pulse_2s_infinite] hover:scale-110"
-        aria-label="Entrar em contato pelo WhatsApp"
-      >
-        <MessageCircle className="h-7 w-7" />
-      </a>
+      <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-2">
+        <button
+          onClick={() => setIsMinimized(true)}
+          className="bg-card/90 hover:bg-card text-muted-foreground p-2 rounded-full shadow-soft transition-all duration-300 hover:scale-105"
+          aria-label="Minimizar WhatsApp"
+        >
+          <Minus className="h-4 w-4" />
+        </button>
+        
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-glow transition-all duration-300 hover:scale-110 flex items-center justify-center"
+          aria-label="Entrar em contato pelo WhatsApp"
+        >
+          <MessageCircle className="h-6 w-6" />
+        </a>
+      </div>
     </>
   );
 };

@@ -51,8 +51,8 @@ const Services = () => {
                 className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-glow transition-all duration-500 border border-border hover:border-primary animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-6 inline-block p-4 bg-primary/10 rounded-xl group-hover:scale-110 transition-transform duration-500">
-                  <Icon className="h-8 w-8 text-primary" />
+                <div className="mb-6 inline-block p-3 bg-primary/10 rounded-xl group-hover:scale-110 transition-transform duration-500">
+                  <Icon className="h-6 w-6 md:h-7 md:w-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>

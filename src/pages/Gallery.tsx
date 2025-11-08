@@ -3,7 +3,6 @@ import { X, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { portfolioImages } from "@/config/images";
 
@@ -116,7 +115,7 @@ const Gallery = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-background sticky top-20 z-40 border-b border-border shadow-sm">
+      <section className="py-8 bg-background md:sticky md:top-20 z-40 border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -139,26 +138,21 @@ const Gallery = () => {
       {/* Gallery Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className="group relative overflow-hidden rounded cursor-pointer animate-fade-in hover:opacity-80 transition-opacity"
+                style={{ animationDelay: `${index * 0.02}s` }}
                 onClick={() => setLightboxImage(item)}
               >
-                <div className="aspect-[3/4] overflow-hidden">
+                <div className="aspect-square overflow-hidden">
                   <img
                     src={item.image}
                     alt={`${item.title} - Foto ${index + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover"
                   />
-                </div>
-                
-                {/* Marca d'água - Studio Manu Fotografias */}
-                <div className="absolute bottom-4 right-4 text-white/80 text-xs font-light bg-background/20 backdrop-blur-sm px-2 py-1 rounded">
-                  Studio Manu Fotografias
                 </div>
               </div>
             ))}
@@ -173,10 +167,43 @@ const Gallery = () => {
           onClick={() => setLightboxImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors z-10"
+            className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors z-10 p-2 bg-card/50 rounded-full"
             onClick={() => setLightboxImage(null)}
+            aria-label="Fechar"
           >
-            <X className="h-8 w-8" />
+            <X className="h-6 w-6" />
+          </button>
+          
+          {/* Navegação anterior */}
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground hover:text-primary transition-colors z-10 p-3 bg-card/80 rounded-full"
+            onClick={(e) => {
+              e.stopPropagation();
+              const currentIndex = filteredItems.findIndex(item => item.id === lightboxImage.id);
+              const prevIndex = (currentIndex - 1 + filteredItems.length) % filteredItems.length;
+              setLightboxImage(filteredItems[prevIndex]);
+            }}
+            aria-label="Foto anterior"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          {/* Navegação próxima */}
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-foreground hover:text-primary transition-colors z-10 p-3 bg-card/80 rounded-full"
+            onClick={(e) => {
+              e.stopPropagation();
+              const currentIndex = filteredItems.findIndex(item => item.id === lightboxImage.id);
+              const nextIndex = (currentIndex + 1) % filteredItems.length;
+              setLightboxImage(filteredItems[nextIndex]);
+            }}
+            aria-label="Próxima foto"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
           
           <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
@@ -186,12 +213,14 @@ const Gallery = () => {
               loading="lazy"
               className="w-full h-auto rounded-lg shadow-glow"
             />
+            <div className="text-center mt-4 text-muted-foreground text-sm">
+              Studio Manu Fotografias
+            </div>
           </div>
         </div>
       )}
 
       <Footer />
-      <ScrollToTop />
       <WhatsAppButton />
     </div>
   );
