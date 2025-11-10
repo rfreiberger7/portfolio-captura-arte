@@ -92,37 +92,34 @@ const Gallery = () => {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-24 pb-6 bg-gradient-hero">
-        <div className="container mx-auto px-4">
+      <section className="pt-20 pb-4 bg-gradient-hero">
+        <div className="container mx-auto px-3 md:px-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-4 group"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-3 group text-sm"
           >
-            <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
+            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             Voltar ao Início
           </button>
           
           <div className="text-center">
-            <h1 className="text-2xl md:text-3xl font-light text-foreground mb-2 animate-fade-in">
+            <h1 className="text-xl md:text-2xl font-light text-foreground mb-2 animate-fade-in">
               Galeria Completa
             </h1>
-            <div className="w-16 h-0.5 bg-primary mx-auto mb-4"></div>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Explore todas as categorias de ensaios fotográficos
-            </p>
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-2"></div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-4 bg-background sticky top-0 z-40 border-b border-border shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="py-3 bg-background sticky top-0 z-40 border-b border-border shadow-sm">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-light transition-all ${
+                className={`px-4 py-1.5 text-sm rounded-full font-light transition-all ${
                   selectedCategory === category.id
                     ? 'bg-primary text-primary-foreground shadow-glow'
                     : 'bg-card text-foreground hover:bg-primary/10 border border-border'
@@ -136,24 +133,22 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+      <section className="py-6 md:py-8">
+        <div className="container mx-auto px-3 md:px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg cursor-pointer animate-fade-in transition-all hover:shadow-lg"
+                className="group relative overflow-hidden rounded-lg cursor-pointer animate-fade-in transition-all hover:shadow-lg bg-muted"
                 style={{ animationDelay: `${index * 0.02}s` }}
                 onClick={() => setLightboxImage(item)}
               >
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img
-                    src={item.image}
-                    alt={`${item.title} - Foto ${index + 1}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                <img
+                  src={item.image}
+                  alt={`${item.title} - Foto ${index + 1}`}
+                  loading="lazy"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
             ))}
           </div>

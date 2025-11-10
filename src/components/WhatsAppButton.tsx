@@ -32,6 +32,11 @@ const WhatsAppButton = () => {
       return () => clearTimeout(timeout);
     } else if (displayedText.length === fullText.length) {
       setIsTyping(false);
+      // Auto-hide after 5 seconds
+      const hideTimeout = setTimeout(() => {
+        setShowWelcome(false);
+      }, 5000);
+      return () => clearTimeout(hideTimeout);
     }
   }, [isTyping, displayedText]);
 
