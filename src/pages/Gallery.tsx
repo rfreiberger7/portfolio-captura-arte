@@ -1,10 +1,17 @@
 import { useState } from "react";
-import { X, ArrowLeft } from "lucide-react";
+import { X, ArrowLeft, ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { portfolioImages } from "@/config/images";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 // Criar array de items do portfólio com todas as imagens de cada categoria
 const portfolioItems = [
@@ -92,62 +99,54 @@ const Gallery = () => {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-20 pb-4 bg-gradient-hero">
-        <div className="container mx-auto px-3 md:px-4">
+      <section className="pt-20 pb-3 bg-gradient-hero">
+        <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-3 group text-sm"
+            className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors mb-3 group text-xs"
           >
-            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            Voltar ao Início
+            <ArrowLeft className="h-3 w-3 group-hover:-translate-x-1 transition-transform" />
+            Voltar
           </button>
           
-          <div className="text-center">
-            <h1 className="text-xl md:text-2xl font-light text-foreground mb-2 animate-fade-in">
-              Galeria Completa
+          <div className="flex items-center justify-between">
+            <h1 className="text-lg font-light text-foreground">
+              Galeria
             </h1>
-            <div className="w-12 h-0.5 bg-primary mx-auto mb-2"></div>
+            
+            {/* Dropdown Filter */}
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-[140px] h-8 text-xs bg-card border-border">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map((category) => (
+                  <SelectItem key={category.id} value={category.id} className="text-xs">
+                    {category.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-3 bg-background sticky top-0 z-40 border-b border-border shadow-sm">
-        <div className="container mx-auto px-3 md:px-4">
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-1.5 text-sm rounded-full font-light transition-all ${
-                  selectedCategory === category.id
-                    ? 'bg-primary text-primary-foreground shadow-glow'
-                    : 'bg-card text-foreground hover:bg-primary/10 border border-border'
-                }`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Grid */}
-      <section className="py-6 md:py-8">
-        <div className="container mx-auto px-3 md:px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {/* Gallery Grid - Instagram Style */}
+      <section className="py-2 bg-background">
+        <div className="container mx-auto px-1">
+          <div className="grid grid-cols-3 gap-1">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg cursor-pointer animate-fade-in transition-all hover:shadow-lg bg-muted"
-                style={{ animationDelay: `${index * 0.02}s` }}
+                className="group relative overflow-hidden cursor-pointer animate-fade-in bg-muted aspect-square"
+                style={{ animationDelay: `${index * 0.01}s` }}
                 onClick={() => setLightboxImage(item)}
               >
                 <img
                   src={item.image}
                   alt={`${item.title} - Foto ${index + 1}`}
                   loading="lazy"
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
