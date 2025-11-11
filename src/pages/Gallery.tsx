@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { X, ArrowLeft, ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
+import { X, ArrowLeft, ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import VideoHero from "@/components/VideoHero";
+import { Skeleton } from "@/components/ui/skeleton";
 import { portfolioImages } from "@/config/images";
 import {
   Select,
@@ -88,7 +90,20 @@ const categories = [
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [lightboxImage, setLightboxImage] = useState<typeof portfolioItems[0] | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const navigate = useNavigate();
+
+  const handleImageLoad = (id: string) => {
+    setLoadedImages(prev => new Set(prev).add(id));
+  };
+
+  const handleBack = () => {
+    if (window.history.length > 1 && document.referrer.includes(window.location.origin)) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
 
   const filteredItems = selectedCategory === "all" 
     ? portfolioItems 
@@ -98,17 +113,22 @@ const Gallery = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
+      {/* Video Hero */}
+      <VideoHero />
+      
+      {/* Fixed Back Button */}
+      <button
+        onClick={handleBack}
+        className="fixed top-20 left-4 z-40 flex items-center gap-2 px-3 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-full text-foreground hover:text-primary transition-all shadow-soft hover:shadow-glow text-sm"
+        aria-label="Voltar"
+      >
+        <ChevronLeft className="h-4 w-4" />
+        <span className="hidden sm:inline">Voltar</span>
+      </button>
+      
       {/* Header */}
-      <section className="pt-20 pb-3 bg-gradient-hero">
+      <section className="pt-6 pb-3 bg-background">
         <div className="container mx-auto px-4">
-          <button
-            onClick={() => navigate('/')}
-            className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors mb-3 group text-xs"
-          >
-            <ArrowLeft className="h-3 w-3 group-hover:-translate-x-1 transition-transform" />
-            Voltar
-          </button>
-          
           <div className="flex items-center justify-between">
             <h1 className="text-lg font-light text-foreground">
               Galeria
@@ -142,11 +162,18 @@ const Gallery = () => {
                 style={{ animationDelay: `${index * 0.01}s` }}
                 onClick={() => setLightboxImage(item)}
               >
+                {!loadedImages.has(item.id) && (
+                  <Skeleton className="absolute inset-0 w-full h-full" />
+                )}
                 <img
                   src={item.image}
                   alt={`${item.title} - Foto ${index + 1}`}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  decoding="async"
+                  className={`w-full h-full object-cover transition-opacity duration-300 ${
+                    loadedImages.has(item.id) ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  onLoad={() => handleImageLoad(item.id)}
                 />
               </div>
             ))}
