@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X, Minus } from "lucide-react";
-import photographerPortrait from "@/assets/photographer-portrait.jpg";
+import logoImg from "/logo-studio-manu.png";
 
 const WhatsAppButton = () => {
   const [showWelcome, setShowWelcome] = useState(false);
@@ -70,9 +70,9 @@ const WhatsAppButton = () => {
             
             <div className="flex items-start gap-3">
               <img
-                src={photographerPortrait}
-                alt="Manu - Studio Manu Fotografias"
-                className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
+                src={logoImg}
+                alt="Studio Manu Fotografias"
+                className="w-12 h-12 rounded-full object-cover border-2 border-primary/20 bg-white p-1"
                 loading="eager"
               />
               <div className="flex-1">

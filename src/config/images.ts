@@ -4,10 +4,6 @@
 // Para trocar as imagens do site, substitua os arquivos em src/assets
 // ou atualize os imports abaixo com os novos arquivos
 
-// === GESTANTE ===
-import gestanteImg from "@/assets/gestante.jpg";
-import milkBathGestanteImg from "@/assets/milk-bath-gestante.jpg";
-
 // === MESVERSÁRIO ===
 import mesversarioImg from "@/assets/mesversario.jpg";
 import mesversario2Img from "@/assets/mesversario-2.jpg";
@@ -53,11 +49,6 @@ import smash10Img from "@/assets/smash-10.jpg";
 import smash24Img from "@/assets/smash-24.jpg";
 import smash26Img from "@/assets/smash-26.jpg";
 
-// Imagens da seção Sobre
-import photographerImg from "@/assets/photographer-portrait.jpg";
-
-// Imagens do Hero Shop (caso você adicione uma loja)
-import heroMainImg from "@/assets/hero-main.jpg";
 
 // Carrossel principal - ordem variada para criar fluxo visual agradável
 export const heroImages = [
@@ -65,14 +56,12 @@ export const heroImages = [
   { image: newborn4Img, title: "Newborn", category: "newborn" },
   { image: mesversario4Img, title: "Mesversário", category: "mesversario" },
   { image: profissional5Img, title: "Profissional", category: "profissional" },
-  { image: gestanteImg, title: "Gestante", category: "gestante" },
   { image: smash8Img, title: "Smash", category: "smash" },
   { image: feminino4Img, title: "Feminino", category: "feminino" },
   { image: preWedding2Img, title: "Ensaio Pré Wedding", category: "preWedding" },
   { image: mesversario98Img, title: "Mesversário", category: "mesversario" },
   { image: newborn17Img, title: "Newborn", category: "newborn" },
   { image: formatura4Img, title: "Formatura", category: "formatura" },
-  { image: milkBathGestanteImg, title: "Gestante", category: "gestante" },
   { image: profissional6Img, title: "Profissional", category: "profissional" },
   { image: smash10Img, title: "Smash", category: "smash" },
   { image: feminino5Img, title: "Feminino", category: "feminino" },
@@ -95,7 +84,6 @@ export const heroImages = [
 
 // Imagens do portfólio organizadas por categoria
 export const portfolioImages = {
-  gestante: [gestanteImg, milkBathGestanteImg],
   mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
   feminino: [femininoImg, feminino1Img, feminino4Img, feminino5Img, feminino13Img, feminino15Img],
   formatura: [formaturaImg, formatura4Img],
@@ -103,12 +91,4 @@ export const portfolioImages = {
   profissional: [profissionalImg, profissional5Img, profissional6Img, profissional7Img, profissional8Img],
   preWedding: [preWeddingImg, preWedding2Img, preWedding3Img],
   smash: [smashImg, smash8Img, smash10Img, smash24Img, smash26Img],
-};
-
-export const aboutImages = {
-  photographer: photographerImg,
-};
-
-export const shopImages = {
-  heroMain: heroMainImg,
 };

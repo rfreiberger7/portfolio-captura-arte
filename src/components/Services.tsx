@@ -2,11 +2,6 @@ import { Camera, Heart, Users, Briefcase, Baby, Sparkles } from "lucide-react";
 
 const services = [
   {
-    icon: Heart,
-    title: "Ensaios Gestante",
-    description: "Milk Bath, ensaios externos e estúdio. Eternizando a beleza da maternidade em cada imagem."
-  },
-  {
     icon: Baby,
     title: "Newborn & Bebês",
     description: "Newborn, mesversário e smash the cake. Registrando os primeiros momentos da vida com delicadeza."

@@ -5,15 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 // Criar array de items do portfólio com todas as imagens de cada categoria
 const portfolioItems = [
-  // Gestante
-  ...portfolioImages.gestante.map((img, idx) => ({
-    id: `gestante-${idx}`,
-    image: img,
-    title: "Gestante",
-    category: "gestante",
-    galleryUrl: "/galeria/gestante",
-    instagramUrl: "https://www.instagram.com/studio.manufotografias/"
-  })),
   // Feminino
   ...portfolioImages.feminino.map((img, idx) => ({
     id: `feminino-${idx}`,
@@ -82,7 +73,6 @@ const portfolioItems = [
 const categories = [
   { id: "all", label: "Todos" },
   { id: "feminino", label: "Feminino" },
-  { id: "gestante", label: "Gestante" },
   { id: "mesversario", label: "Mesversário" },
   { id: "newborn", label: "Newborn" },
   { id: "formatura", label: "Formatura" },
