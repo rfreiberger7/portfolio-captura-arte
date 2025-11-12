@@ -13,6 +13,7 @@ import mesversario109Img from "@/assets/mesversario-109.jpg";
 import mesversario146Img from "@/assets/mesversario-146.jpg";
 
 // === FEMININO ===
+import femininoImg from "@/assets/feminino.jpg";
 import feminino1Img from "@/assets/feminino-1.jpg";
 import feminino4Img from "@/assets/feminino-4.jpg";
 import feminino5Img from "@/assets/feminino-5.jpg";
@@ -20,6 +21,7 @@ import feminino13Img from "@/assets/feminino-13.jpg";
 import feminino15Img from "@/assets/feminino-15.jpg";
 
 // === FORMATURA ===
+import formaturaImg from "@/assets/formatura.jpg";
 import formatura4Img from "@/assets/formatura-4.jpg";
 
 // === NEWBORN ===
@@ -29,6 +31,7 @@ import newborn25Img from "@/assets/newborn-25.jpg";
 import newborn28Img from "@/assets/newborn-28.jpg";
 
 // === PROFISSIONAL ===
+import profissionalImg from "@/assets/profissional.jpg";
 import profissional5Img from "@/assets/profissional-5.jpg";
 import profissional6Img from "@/assets/profissional-6.jpg";
 import profissional7Img from "@/assets/profissional-7.jpg";
@@ -74,6 +77,7 @@ export const heroImages = [
   { image: feminino15Img, title: "Feminino", category: "feminino" },
   { image: smash26Img, title: "Smash", category: "smash" },
   { image: mesversario2Img, title: "Mesversário", category: "mesversario" },
+  { image: formaturaImg, title: "Formatura", category: "formatura" },
   { image: preWeddingImg, title: "Ensaio Pré Wedding", category: "preWedding" },
   { image: smashImg, title: "Smash", category: "smash" },
 ];
@@ -81,10 +85,10 @@ export const heroImages = [
 // Imagens do portfólio organizadas por categoria
 export const portfolioImages = {
   mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
-  feminino: [feminino1Img, feminino4Img, feminino5Img, feminino13Img, feminino15Img],
-  formatura: [formatura4Img],
+  feminino: [femininoImg, feminino1Img, feminino4Img, feminino5Img, feminino13Img, feminino15Img],
+  formatura: [formaturaImg, formatura4Img],
   newborn: [newborn4Img, newborn17Img, newborn25Img, newborn28Img],
-  profissional: [profissional5Img, profissional6Img, profissional7Img, profissional8Img],
+  profissional: [profissionalImg, profissional5Img, profissional6Img, profissional7Img, profissional8Img],
   preWedding: [preWeddingImg, preWedding2Img, preWedding3Img],
   smash: [smashImg, smash8Img, smash10Img, smash24Img, smash26Img],
 };
