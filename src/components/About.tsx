@@ -1,5 +1,5 @@
-import { portfolioImages } from "@/config/images";
 import { Camera, Heart, Sparkles } from "lucide-react";
+import manuPhoto from "@/assets/manu-photo.png";
 
 const About = () => {
   const values = [
@@ -14,7 +14,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="relative animate-fade-in">
             <div className="relative overflow-hidden rounded-2xl shadow-glow max-w-sm mx-auto">
-              <img src={portfolioImages.profissional[0]} alt="Manu - Fotógrafa profissional" loading="lazy" className="w-full h-auto object-cover" />
+              <img src={manuPhoto} alt="Manu - Fotógrafa profissional" loading="lazy" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
             </div>
           </div>
