@@ -28,8 +28,8 @@ const Contact = () => {
 
         <div className="text-center">
           <a href="https://wa.me/5541999791430" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-glow">
-              <MessageCircle className="mr-2 h-5 w-5" />
+            <Button size="lg" className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-right-bottom text-primary-foreground px-10 py-6 text-lg rounded-full shadow-glow hover:scale-105 font-bold transition-all duration-300">
+              <MessageCircle className="mr-2 h-6 w-6" />
               Enviar WhatsApp
             </Button>
           </a>

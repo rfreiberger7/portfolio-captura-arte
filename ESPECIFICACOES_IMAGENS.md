@@ -1,4 +1,4 @@
-# 📸 GUIA COMPLETO DE ESPECIFICAÇÕES DE IMAGENS
+# 📸 GUIA COMPLETO DE ESPECIFICAÇÕES - IMAGENS E VÍDEOS
 ## Studio Manu Fotografias - Manual do Editor
 
 ---
@@ -176,14 +176,114 @@ Antes de enviar qualquer imagem, verificar:
 
 ---
 
+## 📌 ESPECIFICAÇÕES PARA VÍDEO HERO
+
+O vídeo hero é o primeiro elemento visual da página inicial e deve ter especificações otimizadas para web.
+
+### **Proporção e Resolução Ideal**
+- **Proporção:** 16:9 (horizontal) - padrão para vídeos web
+- **Resolução recomendada:** 1920×1080 pixels (Full HD)
+- **Resolução máxima:** 2560×1440 pixels (2K) - apenas se necessário
+- **Não ultrapassar:** 4K não é recomendado para web (muito pesado)
+
+### **Duração do Vídeo**
+- **Ideal:** 15 a 30 segundos
+- **Máximo:** 60 segundos
+- **Motivo:** Vídeos curtos mantêm o usuário engajado e carregam mais rápido
+
+### **Formato e Codec**
+- **Formato:** MP4 (universal, compatível com todos navegadores)
+- **Codec de vídeo:** H.264 (melhor compatibilidade) ou H.265 (menor tamanho, mas menos compatível)
+- **Codec de áudio:** AAC (se tiver áudio)
+- **Taxa de bits:** 3-5 Mbps (balanceamento entre qualidade e tamanho)
+
+### **Tamanho do Arquivo**
+- **Ideal:** 5-15 MB
+- **Máximo:** 25 MB
+- **Motivo:** Arquivos maiores demoram para carregar e prejudicam a experiência do usuário
+
+### **Áudio**
+- **Com ou sem áudio:** Ambos são suportados
+- **Comportamento padrão:** Vídeo inicia **SEM SOM (muted)** automaticamente
+- **Controle de som:** Usuário pode ativar o som clicando no botão de volume
+- **Taxa de bits do áudio:** 128 kbps (suficiente para narração/música de fundo)
+- **Importante:** Se o vídeo tiver áudio, inclua legendas ou texto visual para acessibilidade
+
+### **Configurações de Exportação**
+- **Frame rate:** 24 fps ou 30 fps (não usar 60 fps para web)
+- **Perfil de cor:** Rec. 709 (padrão para web, não usar DCI-P3 ou outros perfis cinema)
+- **Compressão:** Alta compressão (balanceamento entre qualidade e tamanho)
+
+### **Thumbnail (Imagem de pré-visualização)**
+- **Formato:** JPEG
+- **Resolução:** Mesma do vídeo (1920×1080 px)
+- **Peso:** 150-300 KB
+- **Uso:** Aparece enquanto o vídeo está carregando
+
+### **Boas Práticas para o Vídeo Hero**
+- **Movimento suave:** Evitar cortes bruscos ou movimentos muito rápidos
+- **Foco no tema:** O vídeo deve transmitir a essência do trabalho da fotógrafa
+- **Iluminação:** Manter iluminação consistente e profissional
+- **Texto sobreposto:** Se usar texto no vídeo, garantir contraste e legibilidade
+- **Looping:** O vídeo deve funcionar bem em loop (início e fim devem conectar naturalmente)
+
+### **Como Preparar o Vídeo para Web**
+1. **Editar no software de vídeo** (Adobe Premiere, Final Cut, DaVinci Resolve)
+2. **Exportar com as configurações acima**
+3. **Comprimir usando:**
+   - **HandBrake** (gratuito, excelente para compressão)
+   - **Adobe Media Encoder** (profissional)
+   - **Online:** CloudConvert ou similar (para comprimir ainda mais)
+4. **Testar o vídeo:** Reproduzir em diferentes navegadores (Chrome, Safari, Firefox)
+
+### **Substituir o Vídeo no Site**
+1. Salvar o vídeo com nome descritivo (ex: `hero-video.mp4`)
+2. Adicionar o arquivo na pasta `public/` do projeto
+3. Substituir o código placeholder no componente `VideoHero.tsx`
+4. Adicionar também o thumbnail (ex: `hero-thumbnail.jpg`)
+
+**Código para adicionar o vídeo:**
+```html
+<video 
+  ref={videoRef}
+  className="absolute inset-0 w-full h-full object-cover"
+  loop
+  autoPlay
+  playsInline
+  muted={isMuted}
+  poster="/hero-thumbnail.jpg"
+>
+  <source src="/hero-video.mp4" type="video/mp4" />
+  Seu navegador não suporta vídeos.
+</video>
+```
+
+---
+
 ## 📞 DÚVIDAS?
 
-Em caso de dúvidas sobre qualquer especificação, consultar este documento antes de enviar as imagens.
+Em caso de dúvidas sobre qualquer especificação, consultar este documento antes de enviar as imagens ou vídeos.
 
 **Lembre-se:** Qualidade é fundamental, mas performance também. Encontre o equilíbrio perfeito!
 
 ---
 
+## ✅ CHECKLIST FINAL - VÍDEO
+
+Antes de enviar o vídeo, verificar:
+
+- [ ] **Formato MP4:** Com codec H.264
+- [ ] **Resolução:** 1920×1080 pixels (Full HD)
+- [ ] **Duração:** Entre 15-60 segundos
+- [ ] **Tamanho:** Máximo 25 MB
+- [ ] **Frame rate:** 24 ou 30 fps
+- [ ] **Áudio (opcional):** AAC, 128 kbps
+- [ ] **Thumbnail criado:** JPEG, mesma resolução do vídeo
+- [ ] **Testado em navegadores:** Chrome, Safari, Firefox
+
+---
+
 **Documento criado para:** Studio Manu Fotografias  
-**Versão:** 1.0  
-**Data:** Janeiro 2025
+**Versão:** 2.0  
+**Data:** Janeiro 2025  
+**Atualização:** Adicionada seção de especificações de vídeo

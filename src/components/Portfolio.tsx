@@ -124,10 +124,10 @@ const Portfolio = () => {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 ${
+              className={`px-10 py-4 rounded-xl font-bold border-2 transition-all duration-300 hover:scale-105 shadow-soft ${
                 selectedCategory === category.id
-                  ? 'bg-primary text-primary-foreground shadow-glow scale-105'
-                  : 'bg-card text-foreground hover:bg-primary/10 border-2 border-border hover:border-primary/50'
+                  ? "bg-primary text-primary-foreground border-primary shadow-glow scale-105"
+                  : "bg-card text-foreground border-border hover:border-primary/50 hover:bg-primary/5"
               }`}
             >
               {category.label}
@@ -148,6 +148,7 @@ const Portfolio = () => {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 block"
                 />
               </div>

@@ -119,15 +119,29 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
   
-  /* Otimização de imagens */
-  img {
+  /* Otimização de imagens e vídeos */
+  img, video {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
   }
   
+  /* Lazy loading nativo */
+  img[loading="lazy"], video[loading="lazy"] {
+    content-visibility: auto;
+  }
+  
   /* Performance - animações suaves */
   * {
-    @apply transition-smooth;
+    transition: var(--transition-smooth);
+  }
+  
+  /* Reduzir movimento para usuários com preferência de acessibilidade */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 

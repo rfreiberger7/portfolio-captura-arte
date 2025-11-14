@@ -28,10 +28,10 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 mb-16 group px-4 py-2 rounded-lg hover:bg-muted/30"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
-            Voltar ao Portfólio
+            <span className="font-medium">Voltar ao Portfólio</span>
           </button>
           
           <div className="flex items-center justify-between flex-wrap gap-4">
@@ -73,6 +73,7 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                     src={image}
                     alt={`${title} - Foto ${index + 1}`}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 block"
                   />
                 </div>
