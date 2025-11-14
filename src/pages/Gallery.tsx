@@ -15,14 +15,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-// Criar array de items do portfólio com todas as imagens de cada categoria
+// Criar array de items do portfólio com todas as imagens de cada categoria - ordem: newborn primeiro
 const portfolioItems = [
-  // Feminino
-  ...portfolioImages.feminino.map((img, idx) => ({
-    id: `feminino-${idx}`,
+  // Newborn
+  ...portfolioImages.newborn.map((img, idx) => ({
+    id: `newborn-${idx}`,
     image: img,
-    title: "Feminino",
-    category: "feminino"
+    title: "Newborn",
+    category: "newborn"
+  })),
+  // Gestante
+  ...portfolioImages.gestante.map((img, idx) => ({
+    id: `gestante-${idx}`,
+    image: img,
+    title: "Gestante",
+    category: "gestante"
   })),
   // Mesversário
   ...portfolioImages.mesversario.map((img, idx) => ({
@@ -31,26 +38,19 @@ const portfolioItems = [
     title: "Mesversário",
     category: "mesversario"
   })),
-  // Formatura
-  ...portfolioImages.formatura.map((img, idx) => ({
-    id: `formatura-${idx}`,
+  // Smash
+  ...portfolioImages.smash.map((img, idx) => ({
+    id: `smash-${idx}`,
     image: img,
-    title: "Formatura",
-    category: "formatura"
+    title: "Smash",
+    category: "smash"
   })),
-  // Newborn
-  ...portfolioImages.newborn.map((img, idx) => ({
-    id: `newborn-${idx}`,
+  // Casamento
+  ...portfolioImages.casamento.map((img, idx) => ({
+    id: `casamento-${idx}`,
     image: img,
-    title: "Newborn",
-    category: "newborn"
-  })),
-  // Profissional
-  ...portfolioImages.profissional.map((img, idx) => ({
-    id: `profissional-${idx}`,
-    image: img,
-    title: "Profissional",
-    category: "profissional"
+    title: "Casamento",
+    category: "casamento"
   })),
   // Pré Wedding
   ...portfolioImages.preWedding.map((img, idx) => ({
@@ -59,24 +59,40 @@ const portfolioItems = [
     title: "Ensaio Pré Wedding",
     category: "preWedding"
   })),
-  // Smash
-  ...portfolioImages.smash.map((img, idx) => ({
-    id: `smash-${idx}`,
+  // Profissional
+  ...portfolioImages.profissional.map((img, idx) => ({
+    id: `profissional-${idx}`,
     image: img,
-    title: "Smash",
-    category: "smash"
+    title: "Profissional",
+    category: "profissional"
+  })),
+  // Formatura
+  ...portfolioImages.formatura.map((img, idx) => ({
+    id: `formatura-${idx}`,
+    image: img,
+    title: "Formatura",
+    category: "formatura"
+  })),
+  // Feminino
+  ...portfolioImages.feminino.map((img, idx) => ({
+    id: `feminino-${idx}`,
+    image: img,
+    title: "Feminino",
+    category: "feminino"
   })),
 ];
 
 const categories = [
   { id: "all", label: "Todos" },
-  { id: "feminino", label: "Feminino" },
-  { id: "mesversario", label: "Mesversário" },
   { id: "newborn", label: "Newborn" },
-  { id: "formatura", label: "Formatura" },
-  { id: "profissional", label: "Profissional" },
-  { id: "preWedding", label: "Pré Wedding" },
+  { id: "gestante", label: "Gestante" },
+  { id: "mesversario", label: "Mesversário" },
   { id: "smash", label: "Smash" },
+  { id: "casamento", label: "Casamento" },
+  { id: "preWedding", label: "Pré Wedding" },
+  { id: "profissional", label: "Profissional" },
+  { id: "formatura", label: "Formatura" },
+  { id: "feminino", label: "Feminino" },
 ];
 
 const Gallery = () => {
@@ -84,6 +100,10 @@ const Gallery = () => {
   const [lightboxImage, setLightboxImage] = useState<typeof portfolioItems[0] | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleImageLoad = (id: string) => {
     setLoadedImages(prev => new Set(prev).add(id));
