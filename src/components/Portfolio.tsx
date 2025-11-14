@@ -3,15 +3,24 @@ import { X, ExternalLink, Instagram } from "lucide-react";
 import { portfolioImages } from "@/config/images";
 import { useNavigate } from "react-router-dom";
 
-// Criar array de items do portfólio com todas as imagens de cada categoria
+// Criar array de items do portfólio com todas as imagens de cada categoria - ordem: newborn primeiro
 const portfolioItems = [
-  // Feminino
-  ...portfolioImages.feminino.map((img, idx) => ({
-    id: `feminino-${idx}`,
+  // Newborn
+  ...portfolioImages.newborn.map((img, idx) => ({
+    id: `newborn-${idx}`,
     image: img,
-    title: "Feminino",
-    category: "feminino",
-    galleryUrl: "/galeria/feminino",
+    title: "Newborn",
+    category: "newborn",
+    galleryUrl: "/galeria/newborn",
+    instagramUrl: "https://www.instagram.com/studio.manufotografias/"
+  })),
+  // Gestante
+  ...portfolioImages.gestante.map((img, idx) => ({
+    id: `gestante-${idx}`,
+    image: img,
+    title: "Gestante",
+    category: "gestante",
+    galleryUrl: "/galeria/gestante",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
   // Mesversário
@@ -23,31 +32,22 @@ const portfolioItems = [
     galleryUrl: "/galeria/mesversario",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
-  // Formatura
-  ...portfolioImages.formatura.map((img, idx) => ({
-    id: `formatura-${idx}`,
+  // Smash
+  ...portfolioImages.smash.map((img, idx) => ({
+    id: `smash-${idx}`,
     image: img,
-    title: "Formatura",
-    category: "formatura",
-    galleryUrl: "/galeria/formatura",
+    title: "Smash",
+    category: "smash",
+    galleryUrl: "/galeria/smash",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
-  // Newborn
-  ...portfolioImages.newborn.map((img, idx) => ({
-    id: `newborn-${idx}`,
+  // Casamento
+  ...portfolioImages.casamento.map((img, idx) => ({
+    id: `casamento-${idx}`,
     image: img,
-    title: "Newborn",
-    category: "newborn",
-    galleryUrl: "/galeria/newborn",
-    instagramUrl: "https://www.instagram.com/studio.manufotografias/"
-  })),
-  // Profissional
-  ...portfolioImages.profissional.map((img, idx) => ({
-    id: `profissional-${idx}`,
-    image: img,
-    title: "Profissional",
-    category: "profissional",
-    galleryUrl: "/galeria/profissional",
+    title: "Casamento",
+    category: "casamento",
+    galleryUrl: "/galeria/casamento",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
   // Pré Wedding
@@ -59,26 +59,46 @@ const portfolioItems = [
     galleryUrl: "/galeria/pre-wedding",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
-  // Smash
-  ...portfolioImages.smash.map((img, idx) => ({
-    id: `smash-${idx}`,
+  // Profissional
+  ...portfolioImages.profissional.map((img, idx) => ({
+    id: `profissional-${idx}`,
     image: img,
-    title: "Smash",
-    category: "smash",
-    galleryUrl: "/galeria/smash",
+    title: "Profissional",
+    category: "profissional",
+    galleryUrl: "/galeria/profissional",
+    instagramUrl: "https://www.instagram.com/studio.manufotografias/"
+  })),
+  // Formatura
+  ...portfolioImages.formatura.map((img, idx) => ({
+    id: `formatura-${idx}`,
+    image: img,
+    title: "Formatura",
+    category: "formatura",
+    galleryUrl: "/galeria/formatura",
+    instagramUrl: "https://www.instagram.com/studio.manufotografias/"
+  })),
+  // Feminino
+  ...portfolioImages.feminino.map((img, idx) => ({
+    id: `feminino-${idx}`,
+    image: img,
+    title: "Feminino",
+    category: "feminino",
+    galleryUrl: "/galeria/feminino",
     instagramUrl: "https://www.instagram.com/studio.manufotografias/"
   })),
 ];
 
 const categories = [
   { id: "all", label: "Todos" },
-  { id: "feminino", label: "Feminino" },
-  { id: "mesversario", label: "Mesversário" },
   { id: "newborn", label: "Newborn" },
-  { id: "formatura", label: "Formatura" },
-  { id: "profissional", label: "Profissional" },
-  { id: "preWedding", label: "Pré Wedding" },
+  { id: "gestante", label: "Gestante" },
+  { id: "mesversario", label: "Mesversário" },
   { id: "smash", label: "Smash" },
+  { id: "casamento", label: "Casamento" },
+  { id: "preWedding", label: "Pré Wedding" },
+  { id: "profissional", label: "Profissional" },
+  { id: "formatura", label: "Formatura" },
+  { id: "feminino", label: "Feminino" },
 ];
 
 const Portfolio = () => {

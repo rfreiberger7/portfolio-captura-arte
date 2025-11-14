@@ -42,41 +42,64 @@ import smash10Img from "@/assets/smash-10.jpg";
 import smash24Img from "@/assets/smash-24.jpg";
 import smash26Img from "@/assets/smash-26.jpg";
 
+// === GESTANTE ===
+import gestante2Img from "@/assets/gestante-2.jpg";
+import gestante13Img from "@/assets/gestante-13.jpg";
+import gestante16Img from "@/assets/gestante-16.jpg";
+import gestante19Img from "@/assets/gestante-19.jpg";
+import gestante28Img from "@/assets/gestante-28.jpg";
+import gestante71Img from "@/assets/gestante-71.jpg";
+import gestante82Img from "@/assets/gestante-82.jpg";
 
-// Carrossel principal - ordem variada para criar fluxo visual agradável
+// === CASAMENTO ===
+import casamento2Img from "@/assets/casamento-2.jpg";
+import casamento20Img from "@/assets/casamento-20.jpg";
+import casamento23Img from "@/assets/casamento-23.jpg";
+
+
+// Carrossel principal - ordem: newborn -> gestante -> outras categorias -> feminino por último
 export const heroImages = [
-  { image: feminino1Img, title: "Feminino", category: "feminino" },
   { image: newborn4Img, title: "Newborn", category: "newborn" },
-  { image: mesversario4Img, title: "Mesversário", category: "mesversario" },
-  { image: profissional5Img, title: "Profissional", category: "profissional" },
-  { image: smash8Img, title: "Smash", category: "smash" },
-  { image: feminino4Img, title: "Feminino", category: "feminino" },
-  { image: preWedding2Img, title: "Ensaio Pré Wedding", category: "preWedding" },
-  { image: mesversario98Img, title: "Mesversário", category: "mesversario" },
   { image: newborn17Img, title: "Newborn", category: "newborn" },
-  { image: formatura4Img, title: "Formatura", category: "formatura" },
-  { image: profissional6Img, title: "Profissional", category: "profissional" },
-  { image: smash10Img, title: "Smash", category: "smash" },
-  { image: mesversario109Img, title: "Mesversário", category: "mesversario" },
+  { image: gestante16Img, title: "Gestante", category: "gestante" },
+  { image: gestante13Img, title: "Gestante", category: "gestante" },
+  { image: gestante82Img, title: "Gestante", category: "gestante" },
+  { image: gestante71Img, title: "Gestante", category: "gestante" },
   { image: newborn25Img, title: "Newborn", category: "newborn" },
-  { image: preWedding3Img, title: "Ensaio Pré Wedding", category: "preWedding" },
-  { image: profissional7Img, title: "Profissional", category: "profissional" },
-  { image: feminino13Img, title: "Feminino", category: "feminino" },
-  { image: smash24Img, title: "Smash", category: "smash" },
-  { image: mesversario146Img, title: "Mesversário", category: "mesversario" },
   { image: newborn28Img, title: "Newborn", category: "newborn" },
+  { image: mesversario4Img, title: "Mesversário", category: "mesversario" },
+  { image: mesversario98Img, title: "Mesversário", category: "mesversario" },
+  { image: profissional5Img, title: "Profissional", category: "profissional" },
+  { image: profissional6Img, title: "Profissional", category: "profissional" },
+  { image: smash8Img, title: "Smash", category: "smash" },
+  { image: smash10Img, title: "Smash", category: "smash" },
+  { image: casamento20Img, title: "Casamento", category: "casamento" },
+  { image: casamento23Img, title: "Casamento", category: "casamento" },
+  { image: preWedding2Img, title: "Ensaio Pré Wedding", category: "preWedding" },
+  { image: preWedding3Img, title: "Ensaio Pré Wedding", category: "preWedding" },
+  { image: mesversario109Img, title: "Mesversário", category: "mesversario" },
+  { image: mesversario146Img, title: "Mesversário", category: "mesversario" },
+  { image: profissional7Img, title: "Profissional", category: "profissional" },
   { image: profissional8Img, title: "Profissional", category: "profissional" },
+  { image: smash24Img, title: "Smash", category: "smash" },
   { image: smash26Img, title: "Smash", category: "smash" },
+  { image: formatura4Img, title: "Formatura", category: "formatura" },
+  { image: casamento2Img, title: "Casamento", category: "casamento" },
   { image: mesversario2Img, title: "Mesversário", category: "mesversario" },
+  { image: feminino1Img, title: "Feminino", category: "feminino" },
+  { image: feminino4Img, title: "Feminino", category: "feminino" },
+  { image: feminino13Img, title: "Feminino", category: "feminino" },
 ];
 
 // Imagens do portfólio organizadas por categoria
 export const portfolioImages = {
-  mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
-  feminino: [feminino1Img, feminino4Img, feminino13Img],
-  formatura: [formatura4Img],
   newborn: [newborn4Img, newborn17Img, newborn25Img, newborn28Img],
-  profissional: [profissional5Img, profissional6Img, profissional7Img, profissional8Img],
-  preWedding: [preWedding2Img, preWedding3Img],
+  gestante: [gestante16Img, gestante13Img, gestante82Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img],
+  mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
   smash: [smash8Img, smash10Img, smash24Img, smash26Img],
+  casamento: [casamento20Img, casamento23Img, casamento2Img],
+  preWedding: [preWedding2Img, preWedding3Img],
+  profissional: [profissional5Img, profissional6Img, profissional7Img, profissional8Img],
+  formatura: [formatura4Img],
+  feminino: [feminino1Img, feminino4Img, feminino13Img],
 };

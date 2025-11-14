@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, ArrowLeft, Instagram } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -14,6 +14,10 @@ interface GalleryPageProps {
 const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,10 +1,15 @@
-import { Camera, Heart, Users, Briefcase, Baby, Sparkles } from "lucide-react";
+import { Camera, Heart, Users, Baby, Sparkles, BabyIcon } from "lucide-react";
 
 const services = [
   {
     icon: Baby,
     title: "Newborn & Bebês",
     description: "Newborn, mesversário e smash the cake. Registrando os primeiros momentos da vida com delicadeza."
+  },
+  {
+    icon: BabyIcon,
+    title: "Gestante",
+    description: "Ensaios que celebram a beleza da maternidade e a espera do seu bebê com sensibilidade."
   },
   {
     icon: Camera,

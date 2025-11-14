@@ -46,7 +46,7 @@ const Hero = () => {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-background"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent flex items-end justify-center pb-8">
                   <a

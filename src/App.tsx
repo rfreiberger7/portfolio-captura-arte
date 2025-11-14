@@ -15,6 +15,8 @@ import FormaturaGallery from "./pages/gallery/Formatura";
 import ProfissionalGallery from "./pages/gallery/Profissional";
 import PreWeddingGallery from "./pages/gallery/PreWedding";
 import SmashGallery from "./pages/gallery/Smash";
+import GestanteGallery from "./pages/gallery/Gestante";
+import CasamentoGallery from "./pages/gallery/Casamento";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ const App = () => (
           <Route path="/galeria/profissional" element={<ProfissionalGallery />} />
           <Route path="/galeria/pre-wedding" element={<PreWeddingGallery />} />
           <Route path="/galeria/smash" element={<SmashGallery />} />
+          <Route path="/galeria/gestante" element={<GestanteGallery />} />
+          <Route path="/galeria/casamento" element={<CasamentoGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
