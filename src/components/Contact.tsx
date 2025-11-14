@@ -9,32 +9,21 @@ const Contact = () => {
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-          <a 
-            href="mailto:studiomanufotografias@gmail.com" 
-            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
+          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Email</h3>
-            <p className="text-muted-foreground break-words">studiomanufotografias@gmail.com</p>
-          </a>
-          <a 
-            href="tel:+5541999791430" 
-            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
+            <p className="text-muted-foreground">contato@studiomanu.com.br</p>
+          </div>
+          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Telefone</h3>
-            <p className="text-muted-foreground">(41) 9979-1430</p>
-          </a>
-          <a 
-            href="https://www.instagram.com/studio.manufotografias/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow hover:scale-105 transition-all duration-300 cursor-pointer"
-          >
+            <p className="text-muted-foreground">(11) 99999-9999</p>
+          </div>
+          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Instagram</h3>
-            <p className="text-muted-foreground">@studio.manufotografias</p>
-          </a>
+            <p className="text-muted-foreground">@studiomanufotografias</p>
+          </div>
         </div>
 
         <div className="text-center">
