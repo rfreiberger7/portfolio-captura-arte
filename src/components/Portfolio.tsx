@@ -118,16 +118,16 @@ const Portfolio = () => {
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
-        {/* Category Filter */}
+        {/* Category Filter - Melhorado */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-2 rounded-full font-light transition-all ${
+              className={`px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 ${
                 selectedCategory === category.id
-                  ? 'bg-primary text-primary-foreground shadow-glow'
-                  : 'bg-card text-foreground hover:bg-primary/10 border border-border'
+                  ? 'bg-primary text-primary-foreground shadow-glow scale-105'
+                  : 'bg-card text-foreground hover:bg-primary/10 border-2 border-border hover:border-primary/50'
               }`}
             >
               {category.label}
@@ -143,12 +143,12 @@ const Portfolio = () => {
               className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 animate-fade-in"
               style={{ animationDelay: `${0.4 + index * 0.1}s` }}
             >
-              <div className="aspect-[3/4] overflow-hidden cursor-pointer" onClick={() => setLightboxImage(item)}>
+              <div className="aspect-[3/4] overflow-hidden cursor-pointer bg-background" onClick={() => setLightboxImage(item)}>
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 block"
                 />
               </div>
               

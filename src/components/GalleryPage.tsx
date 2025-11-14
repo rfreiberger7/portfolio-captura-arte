@@ -28,7 +28,7 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6 group"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group"
           >
             <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
             Voltar ao Portfólio
@@ -68,12 +68,12 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                 style={{ animationDelay: `${index * 0.05}s` }}
                 onClick={() => setLightboxImage(image)}
               >
-                <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden bg-background">
                   <img
                     src={image}
                     alt={`${title} - Foto ${index + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 block"
                   />
                 </div>
                 

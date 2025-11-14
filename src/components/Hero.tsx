@@ -41,12 +41,12 @@ const Hero = () => {
                 opacity: item.offset === 0 ? 1 : 0.5,
               }}
             >
-              <div className="relative w-[80vw] md:w-[500px] lg:w-[700px] aspect-[4/3] rounded-lg overflow-hidden shadow-glow">
+              <div className="relative w-[80vw] md:w-[500px] lg:w-[700px] aspect-[4/3] rounded-lg overflow-hidden shadow-glow bg-background">
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center block"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent flex items-end justify-center pb-8">
                   <a
