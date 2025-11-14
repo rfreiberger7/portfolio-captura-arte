@@ -22,9 +22,13 @@ import formatura4Img from "@/assets/formatura-4.jpg";
 // === NEWBORN ===
 import newborn4Img from "@/assets/newborn-4.jpg";
 import newborn17Img from "@/assets/newborn-17.jpg";
+import newborn25Img from "@/assets/newborn-25.jpg";
 import newborn28Img from "@/assets/newborn-28.jpg";
 
 // === PROFISSIONAL ===
+import profissional5Img from "@/assets/profissional-5.jpg";
+import profissional6Img from "@/assets/profissional-6.jpg";
+import profissional7Img from "@/assets/profissional-7.jpg";
 import profissional8Img from "@/assets/profissional-8.jpg";
 
 // === PRÉ-WEDDING ===
@@ -40,9 +44,11 @@ import smash26Img from "@/assets/smash-26.jpg";
 // === GESTANTE ===
 import gestante2Img from "@/assets/gestante-2.jpg";
 import gestante13Img from "@/assets/gestante-13.jpg";
+import gestante16Img from "@/assets/gestante-16.jpg";
 import gestante19Img from "@/assets/gestante-19.jpg";
 import gestante28Img from "@/assets/gestante-28.jpg";
 import gestante71Img from "@/assets/gestante-71.jpg";
+import gestante82Img from "@/assets/gestante-82.jpg";
 
 // === CASAMENTO ===
 import casamento2Img from "@/assets/casamento-2.jpg";
@@ -64,12 +70,16 @@ import casamento29Img from "@/assets/casamento-29.jpg";
 export const heroImages = [
   { image: newborn4Img, title: "Newborn", category: "newborn" },
   { image: newborn17Img, title: "Newborn", category: "newborn" },
+  { image: gestante16Img, title: "Gestante", category: "gestante" },
   { image: gestante13Img, title: "Gestante", category: "gestante" },
+  { image: gestante82Img, title: "Gestante", category: "gestante" },
   { image: gestante71Img, title: "Gestante", category: "gestante" },
+  { image: newborn25Img, title: "Newborn", category: "newborn" },
   { image: newborn28Img, title: "Newborn", category: "newborn" },
   { image: mesversario4Img, title: "Mesversário", category: "mesversario" },
   { image: mesversario98Img, title: "Mesversário", category: "mesversario" },
-  { image: profissional8Img, title: "Profissional", category: "profissional" },
+  { image: profissional5Img, title: "Profissional", category: "profissional" },
+  { image: profissional6Img, title: "Profissional", category: "profissional" },
   { image: smash8Img, title: "Smash", category: "smash" },
   { image: smash10Img, title: "Smash", category: "smash" },
   { image: casamento6Img, title: "Casamento", category: "casamento" },
@@ -79,6 +89,8 @@ export const heroImages = [
   { image: preWedding3Img, title: "Ensaio Pré Wedding", category: "preWedding" },
   { image: mesversario109Img, title: "Mesversário", category: "mesversario" },
   { image: mesversario146Img, title: "Mesversário", category: "mesversario" },
+  { image: profissional7Img, title: "Profissional", category: "profissional" },
+  { image: profissional8Img, title: "Profissional", category: "profissional" },
   { image: smash24Img, title: "Smash", category: "smash" },
   { image: smash26Img, title: "Smash", category: "smash" },
   { image: formatura4Img, title: "Formatura", category: "formatura" },
@@ -90,8 +102,8 @@ export const heroImages = [
 
 // Imagens do portfólio organizadas por categoria
 export const portfolioImages = {
-  newborn: [newborn4Img, newborn17Img, newborn28Img],
-  gestante: [gestante13Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img],
+  newborn: [newborn4Img, newborn17Img, newborn25Img, newborn28Img],
+  gestante: [gestante16Img, gestante13Img, gestante82Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img],
   mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
   smash: [smash8Img, smash10Img, smash24Img, smash26Img],
   casamento: [
@@ -110,7 +122,7 @@ export const portfolioImages = {
     casamento29Img
   ],
   preWedding: [preWedding2Img, preWedding3Img],
-  profissional: [profissional8Img],
+  profissional: [profissional5Img, profissional6Img, profissional7Img, profissional8Img],
   formatura: [formatura4Img],
   feminino: [feminino4Img, feminino13Img],
 };
