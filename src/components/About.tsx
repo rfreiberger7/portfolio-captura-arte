@@ -9,13 +9,18 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="relative animate-fade-in">
-            <div className="relative overflow-hidden rounded-2xl shadow-glow max-w-sm mx-auto">
-              <img src={manuPhoto} alt="Manu - Fotógrafa profissional" loading="lazy" className="w-full h-auto object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+            <div className="relative overflow-hidden rounded-2xl shadow-glow w-full md:max-w-[420px] mx-auto">
+              <img 
+                src={manuPhoto} 
+                alt="Manu - Fotógrafa profissional especializada em ensaios femininos, newborn e eventos" 
+                loading="lazy" 
+                className="w-full h-auto object-cover aspect-[4/5]" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
             </div>
           </div>
 
