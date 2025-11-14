@@ -18,7 +18,7 @@ const About = () => {
                 src={manuPhoto} 
                 alt="Manu - Fotógrafa profissional especializada em ensaios femininos, newborn e eventos" 
                 loading="lazy" 
-                className="w-full h-auto object-cover object-[center_20%] aspect-[4/5] scale-125" 
+                className="w-full h-full object-cover object-[30%_center] aspect-[4/5]" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
             </div>
