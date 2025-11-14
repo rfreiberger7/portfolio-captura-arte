@@ -14,7 +14,7 @@ const services = [
   {
     icon: Camera,
     title: "Ensaios Individuais",
-    description: "Feminino, formatura e profissional. Imagens que refletem sua essência e personalidade."
+    description: "Feminino, formatura, profissional e ensaio sensual. Imagens que refletem sua essência e personalidade."
   },
   {
     icon: Sparkles,

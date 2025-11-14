@@ -13,7 +13,6 @@ import mesversario109Img from "@/assets/mesversario-109.jpg";
 import mesversario146Img from "@/assets/mesversario-146.jpg";
 
 // === FEMININO ===
-import feminino1Img from "@/assets/feminino-1.jpg";
 import feminino4Img from "@/assets/feminino-4.jpg";
 import feminino13Img from "@/assets/feminino-13.jpg";
 
@@ -55,6 +54,16 @@ import gestante82Img from "@/assets/gestante-82.jpg";
 import casamento2Img from "@/assets/casamento-2.jpg";
 import casamento20Img from "@/assets/casamento-20.jpg";
 import casamento23Img from "@/assets/casamento-23.jpg";
+import casamento22Img from "@/assets/casamento-2-2.jpg";
+import casamento5Img from "@/assets/casamento-5.jpg";
+import casamento6Img from "@/assets/casamento-6.jpg";
+import casamento9Img from "@/assets/casamento-9.jpg";
+import casamento10Img from "@/assets/casamento-10.jpg";
+import casamento11Img from "@/assets/casamento-11.jpg";
+import casamento15Img from "@/assets/casamento-15.jpg";
+import casamento202Img from "@/assets/casamento-20-2.jpg";
+import casamento21Img from "@/assets/casamento-21.jpg";
+import casamento29Img from "@/assets/casamento-29.jpg";
 
 
 // Carrossel principal - ordem: newborn -> gestante -> outras categorias -> feminino por último
@@ -73,8 +82,9 @@ export const heroImages = [
   { image: profissional6Img, title: "Profissional", category: "profissional" },
   { image: smash8Img, title: "Smash", category: "smash" },
   { image: smash10Img, title: "Smash", category: "smash" },
-  { image: casamento20Img, title: "Casamento", category: "casamento" },
-  { image: casamento23Img, title: "Casamento", category: "casamento" },
+  { image: casamento6Img, title: "Casamento", category: "casamento" },
+  { image: casamento15Img, title: "Casamento", category: "casamento" },
+  { image: casamento29Img, title: "Casamento", category: "casamento" },
   { image: preWedding2Img, title: "Ensaio Pré Wedding", category: "preWedding" },
   { image: preWedding3Img, title: "Ensaio Pré Wedding", category: "preWedding" },
   { image: mesversario109Img, title: "Mesversário", category: "mesversario" },
@@ -86,9 +96,8 @@ export const heroImages = [
   { image: formatura4Img, title: "Formatura", category: "formatura" },
   { image: casamento2Img, title: "Casamento", category: "casamento" },
   { image: mesversario2Img, title: "Mesversário", category: "mesversario" },
-  { image: feminino1Img, title: "Feminino", category: "feminino" },
   { image: feminino4Img, title: "Feminino", category: "feminino" },
-  { image: feminino13Img, title: "Feminino", category: "feminino" },
+  { image: feminino13Img, title: "Feminino", category: "feminino" }
 ];
 
 // Imagens do portfólio organizadas por categoria
@@ -97,9 +106,23 @@ export const portfolioImages = {
   gestante: [gestante16Img, gestante13Img, gestante82Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img],
   mesversario: [mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img],
   smash: [smash8Img, smash10Img, smash24Img, smash26Img],
-  casamento: [casamento20Img, casamento23Img, casamento2Img],
+  casamento: [
+    casamento2Img, 
+    casamento20Img, 
+    casamento23Img, 
+    casamento22Img, 
+    casamento5Img, 
+    casamento6Img, 
+    casamento9Img, 
+    casamento10Img, 
+    casamento11Img, 
+    casamento15Img, 
+    casamento202Img, 
+    casamento21Img, 
+    casamento29Img
+  ],
   preWedding: [preWedding2Img, preWedding3Img],
   profissional: [profissional5Img, profissional6Img, profissional7Img, profissional8Img],
   formatura: [formatura4Img],
-  feminino: [feminino1Img, feminino4Img, feminino13Img],
+  feminino: [feminino4Img, feminino13Img],
 };
