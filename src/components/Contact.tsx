@@ -12,17 +12,17 @@ const Contact = () => {
           <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Email</h3>
-            <p className="text-muted-foreground">contato@studiomanu.com.br</p>
+            <p className="text-muted-foreground">studiomanufotografias@gmail.com</p>
           </div>
           <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Telefone</h3>
-            <p className="text-muted-foreground">(11) 99999-9999</p>
+            <p className="text-muted-foreground">(41) 9979-1430</p>
           </div>
           <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
             <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Instagram</h3>
-            <p className="text-muted-foreground">@studiomanufotografias</p>
+            <p className="text-muted-foreground">@studio.manufotografias</p>
           </div>
         </div>
 

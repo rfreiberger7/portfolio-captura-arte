@@ -4,20 +4,56 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Ana Silva",
-    text: "Experiência incrível! As fotos ficaram perfeitas e capturaram exatamente o que queríamos transmitir.",
+    name: "Kamylle Nicole Peixoto",
+    text: "A Manu é uma excelente profissional, atenciosa e extremamente querida durante todo o ensaio newborn. Seu cuidado e o amor que coloca no que faz são visíveis em cada detalhe. Recomendo de coração e, sem dúvida, voltarei a realizar novos ensaios fotográficos com ela!",
     rating: 5
   },
   {
     id: 2,
-    name: "Carlos Mendes",
-    text: "Profissionalismo impecável e resultado além das expectativas. Recomendo muito!",
+    name: "Adriana Souza",
+    text: "Simplesmente maravilhosa. Super atenciosa. Maquiagem ficou perfeita. Todo o cuidado necessário com uma gestante. Estou super feliz com os resultados e ansiosa para receber as fotos. Obrigada pela experiência incrível.",
     rating: 5
   },
   {
     id: 3,
-    name: "Marina Santos",
-    text: "A sensibilidade da Manu em capturar nossos momentos foi extraordinária. Fotos lindas e emocionantes!",
+    name: "Juliana Palmonari",
+    text: "Excelente profissional, atenciosa, querida. Trata as fotos com muito carinho, realmente faz um trabalho para eternizar os momentos especiais!",
+    rating: 5
+  },
+  {
+    id: 4,
+    name: "Larissa Negro",
+    text: "Incrível, fotógrafa maravilhosa, amei meu e ensaio de Natal e com certeza farei outros, muito atenciosa! Recomendo",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Mapus Burro",
+    text: "Super indico o trabalho da Manu, ótima profissional 👏",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Andressa Mathias",
+    text: "Ótimo recepção, lugar aconchegante. Ensaio bem descontraído. Amei",
+    rating: 5
+  },
+  {
+    id: 7,
+    name: "Luciana Madalena Paschalis Casalunga",
+    text: "Amei as fotos e figurinos que fiz de gestante no estúdio. A Manu super atenciosa, criativa nos deixou super a vontade. Além da maquiagem profissional que ela fez, deu toda diferença para fotos. Valeu muito apena super indico. Além da localização do estúdio que facilita também.",
+    rating: 5
+  },
+  {
+    id: 8,
+    name: "Nath Cristina",
+    text: "Lugar maravilhosa e aconchegante, atendimento da Manu é perfeito, simpática e muito cuidadosa, me auxiliou em tudo muito bem, me senti maravilhosa, super indico 🥰🤗",
+    rating: 5
+  },
+  {
+    id: 9,
+    name: "Fernanda Caroline Becker Arent Rosa",
+    text: "Amei, ótimo atendimento e excelente profissional!",
     rating: 5
   }
 ];
