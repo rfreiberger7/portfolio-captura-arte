@@ -20,38 +20,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@studiomanufotografias" />
 
-    <!-- Google Ads / Google Analytics - Substitua 'G-XXXXXXXXXX' pelo seu ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // Substitua pelo seu Google Analytics ID
-      gtag('config', 'AW-XXXXXXXXXX'); // Substitua pelo seu Google Ads Conversion ID
-    </script>
+    <!-- META PIXEL (Facebook) – colar script aqui -->
+    
+    <!-- FIM META PIXEL -->
 
-    <!-- Facebook Pixel - Substitua 'YOUR_PIXEL_ID' pelo seu ID do Pixel -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'YOUR_PIXEL_ID'); // Substitua pelo seu Facebook Pixel ID
-      fbq('track', 'PageView');
-    </script>
+    <!-- GOOGLE ADS TAG – colar script aqui -->
+    
+    <!-- FIM GOOGLE ADS TAG -->
   </head>
 
   <body>
-    <!-- Facebook Pixel noscript -->
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-    </noscript>
-    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
