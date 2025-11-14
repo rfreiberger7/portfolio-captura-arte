@@ -1,12 +1,44 @@
-import { useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
+import { useState, useRef } from "react";
+import { Volume2, VolumeX, Play, Pause } from "lucide-react";
 
 const VideoHero = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden bg-background">
-      {/* Placeholder para vídeo - Manu enviará o vídeo posteriormente */}
+      {/* Placeholder para vídeo - Quando adicionar o vídeo real, substituir o div abaixo por: */}
+      {/* <video 
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover"
+        loop
+        playsInline
+        muted={isMuted}
+        poster="/caminho-para-thumbnail.jpg"
+      >
+        <source src="/caminho-para-video.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video> */}
+      
       <div className="relative w-full h-full bg-gradient-to-br from-primary/5 via-background to-accent/5 flex items-center justify-center">
         <div className="text-center px-4">
           <p className="text-muted-foreground text-lg mb-4">Vídeo de apresentação será adicionado em breve</p>
@@ -15,19 +47,33 @@ const VideoHero = () => {
           </div>
         </div>
         
-        {/* Botão de som (será ativado quando houver vídeo) */}
-        <button
-          onClick={() => setIsMuted(!isMuted)}
-          className="absolute bottom-6 right-6 p-3 bg-card/90 backdrop-blur-sm border border-border rounded-full hover:bg-primary/10 hover:border-primary transition-all shadow-soft opacity-50 cursor-not-allowed"
-          disabled
-          aria-label={isMuted ? "Ativar som" : "Desativar som"}
-        >
-          {isMuted ? (
-            <VolumeX className="h-5 w-5 text-muted-foreground" />
-          ) : (
-            <Volume2 className="h-5 w-5 text-primary" />
-          )}
-        </button>
+        {/* Controles de vídeo (serão ativados quando houver vídeo real) */}
+        <div className="absolute bottom-6 right-6 flex gap-3">
+          <button
+            onClick={togglePlay}
+            className="p-3 bg-card/90 backdrop-blur-sm border border-border rounded-full hover:bg-primary/10 hover:border-primary transition-all shadow-soft opacity-50 cursor-not-allowed"
+            disabled
+            aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+          >
+            {isPlaying ? (
+              <Pause className="h-5 w-5 text-muted-foreground" />
+            ) : (
+              <Play className="h-5 w-5 text-muted-foreground" />
+            )}
+          </button>
+          <button
+            onClick={toggleMute}
+            className="p-3 bg-card/90 backdrop-blur-sm border border-border rounded-full hover:bg-primary/10 hover:border-primary transition-all shadow-soft opacity-50 cursor-not-allowed"
+            disabled
+            aria-label={isMuted ? "Ativar som" : "Desativar som"}
+          >
+            {isMuted ? (
+              <VolumeX className="h-5 w-5 text-muted-foreground" />
+            ) : (
+              <Volume2 className="h-5 w-5 text-primary" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Frase de impacto */}
