@@ -148,7 +148,7 @@ const Portfolio = () => {
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               
@@ -211,7 +211,7 @@ const Portfolio = () => {
               src={lightboxImage.image}
               alt={lightboxImage.title}
               loading="lazy"
-              className="w-full h-auto rounded-lg shadow-glow"
+              className="w-full h-auto object-contain rounded-lg shadow-glow"
             />
             <div className="text-center mt-6">
               <h3 className="text-2xl font-bold text-foreground mb-2">{lightboxImage.title}</h3>
