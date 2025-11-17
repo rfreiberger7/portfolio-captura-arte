@@ -65,14 +65,15 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Gallery Grid - Layout Mosaico Desktop */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {/* Grid responsivo: 2 colunas mobile, 4 colunas desktop */}
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
             {images.map((image, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
+                className="relative overflow-hidden rounded-lg cursor-pointer"
                 onClick={() => setLightboxImage(image)}
                 style={{ 
-                  height: '300px',
+                  height: '250px',
                   transition: 'none',
                   transform: 'none',
                   animation: 'none'
@@ -83,8 +84,13 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                   alt={`${title} - Foto ${index + 1}`}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center block"
-                  style={{ transition: 'none', transform: 'none' }}
+                  className="w-full h-full object-cover block"
+                  style={{ 
+                    transition: 'none', 
+                    transform: 'none',
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
                 />
                 
                 {/* Marca d'água - Studio Manu Fotografias */}

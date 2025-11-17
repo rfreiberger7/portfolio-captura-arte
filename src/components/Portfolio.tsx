@@ -136,16 +136,17 @@ const Portfolio = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-8 py-4 rounded-lg text-base font-bold border-2 ${
+                className={`px-8 py-4 rounded-lg text-base font-bold ${
                   selectedCategory === category.id
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-card text-foreground border-border"
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-card text-foreground border-2 border-border"
                 }`}
                 style={{ 
-                  transition: 'none',
-                  transform: 'none',
-                  animation: 'none',
-                  boxShadow: 'none'
+                  transition: 'none !important',
+                  transform: 'none !important',
+                  animation: 'none !important',
+                  boxShadow: 'none !important',
+                  outline: 'none !important'
                 }}
               >
                 {category.label}
