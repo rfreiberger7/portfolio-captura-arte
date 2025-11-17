@@ -42,11 +42,11 @@ const Navbar = () => {
           {/* Logo - Left */}
           <div className="flex items-center">
             <a href="#home" className="flex items-center group">
-              <img 
-                src={logoImg} 
-                alt="Studio Manu Fotografias - Fotografia Profissional" 
-                className="h-16 w-16 rounded-full object-cover transition-opacity hover:opacity-80"
-              />
+          <img 
+            src={logoImg} 
+            alt="Studio Manu Fotografias - Fotografia Profissional" 
+            className="h-16 w-16 rounded-full object-cover transition-opacity hover:opacity-80"
+          />
             </a>
           </div>
 

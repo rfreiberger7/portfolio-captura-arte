@@ -20,9 +20,7 @@ const Contact = () => {
             </p>
           </a>
           <a 
-            href="https://wa.me/5541999791430"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+5541999791430"
             className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow transition-all duration-300 hover:scale-105 cursor-pointer"
           >
             <Phone className="h-8 w-8 text-primary mx-auto mb-4" />

@@ -8,7 +8,7 @@ const Footer = () => {
         <img 
           src={logoImg} 
           alt="Studio Manu Fotografias - Fotografia Profissional" 
-          className="h-20 w-20 rounded-full object-cover mx-auto mb-6" 
+          className="h-24 w-24 rounded-full object-cover mx-auto mb-6" 
         />
         <div className="flex justify-center gap-4 mb-6">
           <a 
