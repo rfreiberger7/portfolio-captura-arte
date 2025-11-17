@@ -29,9 +29,9 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
           <div className="flex flex-col items-center mb-8">
             <button
               onClick={() => navigate('/')}
-              className="mb-6 flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-right-bottom text-primary-foreground rounded-full transition-all duration-300 shadow-glow hover:scale-105 font-bold text-lg"
+              className="mb-6 flex items-center gap-2 px-6 py-3 bg-background text-foreground border-2 border-border rounded-lg hover:bg-primary/10 hover:border-primary font-semibold"
             >
-              <ArrowLeft className="h-6 w-6" />
+              <ArrowLeft className="h-5 w-5" />
               Voltar ao Portfólio
             </button>
             
@@ -60,7 +60,7 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Gallery Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {images.map((image, index) => (
               <div
                 key={index}

@@ -118,20 +118,17 @@ const Portfolio = () => {
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
-        {/* Category Filter - Melhorado */}
+        {/* Category Filter - Redesenhado */}
         <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <p className="text-center text-base text-foreground mb-6 font-semibold bg-primary/10 py-3 rounded-lg max-w-md mx-auto border-2 border-primary/30">
-            👇 Selecione aqui seu tipo de imagem 👇
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-8 py-3 rounded-full text-sm font-semibold transition-colors duration-200 border-2 ${
+                className={`px-6 py-2.5 rounded-md text-sm font-medium border ${
                   selectedCategory === category.id
-                    ? "bg-primary text-primary-foreground border-primary shadow-glow"
-                    : "bg-card text-foreground border-border hover:bg-primary/5 hover:border-primary shadow-soft"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-background text-foreground border-border hover:bg-primary/10 hover:border-primary/50"
                 }`}
               >
                 {category.label}
@@ -141,7 +138,7 @@ const Portfolio = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {filteredItems.slice(0, 6).map((item, index) => (
             <div
               key={item.id}
