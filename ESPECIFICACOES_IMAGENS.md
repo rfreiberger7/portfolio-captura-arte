@@ -46,6 +46,53 @@ O carrossel é a primeira impressão do site - as imagens devem ter alta qualida
 
 ---
 
+## 📌 ESPECIFICAÇÕES PARA FOTO "SOBRE MIM"
+
+A foto da seção "Sobre Mim" é o retrato profissional da fotógrafa e deve seguir especificações precisas para evitar cortes.
+
+### **Proporção Ideal**
+- **4:5 (vertical/retrato)**
+- Exemplo: 1200×1500px, 1600×2000px
+
+### **Resolução Recomendada**
+- **Mínima:** 1200×1500 pixels
+- **Ideal:** 1600×2000 pixels
+- **DPI:** 150 dpi para excelente qualidade
+
+### **Tamanho do Arquivo**
+- **Ideal:** 300-500 KB
+- **Máximo:** 800 KB
+
+### **Orientações de Enquadramento (CRÍTICO)**
+- **Plano americano ou plano médio:** Da cintura para cima ou dos joelhos para cima
+- **Fundo:** Pode ser qualquer fundo, mas evitar elementos que competem com a pessoa
+- **Centralização:** Pessoa deve estar centralizada no quadro
+- **Espaço superior:** Deixar pelo menos 15% de espaço acima da cabeça
+- **Laterais:** Manter braços e ombros completamente dentro do quadro (10% de margem)
+- **Olhar:** De preferência, olhando para a câmera ou levemente para o lado
+
+### **Como Evitar Cortes**
+- **Container usa object-cover:** A imagem será ajustada para preencher um container 4:5
+- **Não haverá bordas brancas:** Por isso é essencial que a foto já venha na proporção 4:5
+- **Ponto focal:** O rosto deve estar no terço superior da imagem
+- **Zona segura:** Manter todos os elementos importantes no centro (70% da área)
+
+### **Checklist Antes de Fazer Upload**
+- [ ] Foto está na proporção 4:5 (vertical)?
+- [ ] Pessoa está completamente enquadrada (sem cortes)?
+- [ ] Fundo não compete visualmente com a pessoa?
+- [ ] Foto tem boa iluminação e nitidez?
+- [ ] Arquivo está entre 300-800 KB?
+- [ ] Formato é JPEG com perfil sRGB?
+
+### **Formato de Exportação**
+- **Formato:** JPEG
+- **Perfil de cor:** sRGB
+- **Compressão:** 80-85%
+- **Metadados:** Manter apenas informações essenciais
+
+---
+
 ## 📌 ESPECIFICAÇÕES PARA FOTOS DA GALERIA
 
 As imagens da galeria devem manter consistência visual e carregar rapidamente.

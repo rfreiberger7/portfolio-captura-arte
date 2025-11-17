@@ -9,21 +9,36 @@ const Contact = () => {
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
+          <a 
+            href="mailto:studiomanufotografias@gmail.com"
+            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow transition-all duration-300 hover:scale-105 cursor-pointer"
+          >
             <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Email</h3>
-            <p className="text-muted-foreground text-sm break-words">studiomanufotografias@gmail.com</p>
-          </div>
-          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
+            <p className="text-muted-foreground text-sm break-words hover:text-primary transition-colors">
+              studiomanufotografias@gmail.com
+            </p>
+          </a>
+          <a 
+            href="https://wa.me/5541999791430"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow transition-all duration-300 hover:scale-105 cursor-pointer"
+          >
             <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Telefone</h3>
-            <p className="text-muted-foreground">(41) 99979-1430</p>
-          </div>
-          <div className="bg-card rounded-2xl p-8 shadow-soft text-center">
+            <p className="text-muted-foreground hover:text-primary transition-colors">(41) 99979-1430</p>
+          </a>
+          <a 
+            href="https://www.instagram.com/studio.manufotografias/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card rounded-2xl p-8 shadow-soft text-center hover:shadow-glow transition-all duration-300 hover:scale-105 cursor-pointer"
+          >
             <MessageCircle className="h-8 w-8 text-primary mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2 text-foreground">Instagram</h3>
-            <p className="text-muted-foreground">@studio.manufotografias</p>
-          </div>
+            <p className="text-muted-foreground hover:text-primary transition-colors">@studio.manufotografias</p>
+          </a>
         </div>
 
         <div className="text-center">

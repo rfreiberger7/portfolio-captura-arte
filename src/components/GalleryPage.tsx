@@ -27,18 +27,18 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       <section className="pt-32 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-8">
+            <button
+              onClick={() => navigate('/')}
+              className="mb-6 flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-right-bottom text-primary-foreground rounded-full transition-all duration-300 shadow-glow hover:scale-105 font-bold text-lg"
+            >
+              <ArrowLeft className="h-6 w-6" />
+              Voltar ao Portfólio
+            </button>
+            
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in text-center">
               {title}
             </h1>
             <div className="w-24 h-1 bg-primary mb-8"></div>
-            
-            <button
-              onClick={() => navigate('/')}
-              className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all duration-300 shadow-glow hover:scale-105 font-medium"
-            >
-              <ArrowLeft className="h-5 w-5" />
-              Voltar ao Portfólio
-            </button>
           </div>
           
           {instagramUrl && (
@@ -60,7 +60,7 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Gallery Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {images.map((image, index) => (
               <div
                 key={index}
