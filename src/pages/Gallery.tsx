@@ -128,32 +128,33 @@ const Gallery = () => {
       {/* Video Hero */}
       <VideoHero />
       
-      {/* Fixed Back Button */}
-      <button
-        onClick={handleBack}
-        className="fixed top-20 left-4 z-40 flex items-center gap-2 px-3 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-full text-foreground hover:text-primary transition-all shadow-soft hover:shadow-glow text-sm"
-        aria-label="Voltar"
-      >
-        <ChevronLeft className="h-4 w-4" />
-        <span className="hidden sm:inline">Voltar</span>
-      </button>
-      
       {/* Header */}
-      <section className="pt-6 pb-3 bg-background">
+      <section className="pt-8 pb-4 bg-background">
         <div className="container mx-auto px-4">
+          {/* Botão Voltar no topo */}
+          <div className="mb-6">
+            <button
+              onClick={handleBack}
+              className="flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-bold text-lg shadow-lg hover:bg-secondary/90 border-2 border-secondary"
+            >
+              <ArrowLeft className="h-6 w-6" />
+              ← Voltar à Página Inicial
+            </button>
+          </div>
+
           <div className="flex items-center justify-between">
-            <h1 className="text-lg font-light text-foreground">
+            <h1 className="text-2xl md:text-3xl font-bold text-foreground">
               Galeria
             </h1>
             
-            {/* Dropdown Filter */}
+            {/* Dropdown Filter - SEM EFEITOS */}
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-[140px] h-8 text-xs bg-card border-border">
+              <SelectTrigger className="w-[180px] h-10 text-sm bg-card border-border transition-none">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
                 {categories.map((category) => (
-                  <SelectItem key={category.id} value={category.id} className="text-xs">
+                  <SelectItem key={category.id} value={category.id} className="text-sm">
                     {category.label}
                   </SelectItem>
                 ))}
@@ -163,14 +164,14 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Gallery Grid - Instagram Style */}
-      <section className="py-2 bg-background">
-        <div className="container mx-auto px-1">
-          <div className="grid grid-cols-3 gap-1">
+      {/* Gallery Grid - Instagram Style: 4 POR FILA */}
+      <section className="py-4 bg-background">
+        <div className="w-full px-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-4">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden cursor-pointer animate-fade-in bg-muted aspect-square"
+                className="relative overflow-hidden cursor-pointer animate-fade-in bg-muted aspect-square"
                 style={{ animationDelay: `${index * 0.01}s` }}
                 onClick={() => setLightboxImage(item)}
               >
@@ -182,7 +183,7 @@ const Gallery = () => {
                   alt={`${item.title} - Foto ${index + 1}`}
                   loading="lazy"
                   decoding="async"
-                  className={`w-full h-full object-cover transition-opacity duration-300 ${
+                  className={`w-full h-full object-cover ${
                     loadedImages.has(item.id) ? 'opacity-100' : 'opacity-0'
                   }`}
                   onLoad={() => handleImageLoad(item.id)}

@@ -136,13 +136,13 @@ const Portfolio = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-8 py-4 rounded-lg text-base font-bold ${
+                className={`px-6 py-3 rounded-lg text-base font-semibold transition-none ${
                   selectedCategory === category.id
                     ? "bg-primary text-primary-foreground"
                     : "bg-card text-foreground border-2 border-border"
                 }`}
                 style={{ 
-                  transition: 'none !important',
+                  transition: 'none',
                   transform: 'none !important',
                   animation: 'none !important',
                   boxShadow: 'none !important',
@@ -155,9 +155,9 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {filteredItems.slice(0, 6).map((item, index) => (
+        {/* Gallery Grid - 4 por fila */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+          {filteredItems.slice(0, 8).map((item, index) => (
             <div
               key={item.id}
               className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 animate-fade-in"
