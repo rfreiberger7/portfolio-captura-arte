@@ -34,52 +34,54 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground animate-fade-in">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-foreground animate-fade-in">
           Depoimentos
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
+        <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-3xl mx-auto relative">
           {/* Testimonial Card */}
-          <div className="bg-card rounded-2xl p-12 shadow-glow border border-border animate-fade-in">
-            <Quote className="h-12 w-12 text-primary mb-6 mx-auto" />
+          <div className="bg-card rounded-xl p-6 md:p-8 shadow-soft border border-border animate-fade-in">
+            <Quote className="h-8 w-8 text-primary mb-4 mx-auto" />
             
-            <p className="text-xl text-foreground text-center mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-foreground text-center mb-6 leading-relaxed">
               "{testimonials[currentIndex].text}"
             </p>
             
             <div className="text-center">
-              <p className="text-lg font-semibold text-foreground">
+              <p className="text-base font-semibold text-foreground">
                 {testimonials[currentIndex].name}
               </p>
               <div className="flex justify-center gap-1 mt-2">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <span key={i} className="text-primary text-xl">★</span>
+                  <span key={i} className="text-primary text-lg">★</span>
                 ))}
               </div>
             </div>
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-3 mt-6">
             <button
               onClick={prevTestimonial}
-              className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:border-primary transition-all shadow-soft"
+              className="p-2 bg-card border border-border rounded-full hover:bg-primary hover:border-primary transition-all shadow-soft"
+              aria-label="Depoimento anterior"
             >
-              <ChevronLeft className="h-6 w-6 text-foreground" />
+              <ChevronLeft className="h-5 w-5 text-foreground" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:border-primary transition-all shadow-soft"
+              className="p-2 bg-card border border-border rounded-full hover:bg-primary hover:border-primary transition-all shadow-soft"
+              aria-label="Próximo depoimento"
             >
-              <ChevronRight className="h-6 w-6 text-foreground" />
+              <ChevronRight className="h-5 w-5 text-foreground" />
             </button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-4">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -87,6 +89,7 @@ const Testimonials = () => {
                 className={`h-2 rounded-full transition-all ${
                   index === currentIndex ? 'w-8 bg-primary' : 'w-2 bg-muted'
                 }`}
+                aria-label={`Ir para depoimento ${index + 1}`}
               />
             ))}
           </div>

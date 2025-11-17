@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Instagram, Mail, Phone } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-studio-manu.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +44,8 @@ const Navbar = () => {
             <a href="#home" className="flex items-center group">
               <img 
                 src={logoImg} 
-                alt="Studio Manu Fotografias" 
-                className="h-12 w-auto transition-opacity hover:opacity-80"
+                alt="Studio Manu Fotografias - Fotografia Profissional" 
+                className="h-16 w-auto transition-opacity hover:opacity-80"
               />
             </a>
           </div>

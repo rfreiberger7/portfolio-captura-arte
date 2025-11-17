@@ -119,20 +119,25 @@ const Portfolio = () => {
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
         {/* Category Filter - Melhorado */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-10 py-4 rounded-xl font-bold border-2 transition-all duration-300 hover:scale-105 shadow-soft ${
-                selectedCategory === category.id
-                  ? "bg-primary text-primary-foreground border-primary shadow-glow scale-105"
-                  : "bg-card text-foreground border-border hover:border-primary/50 hover:bg-primary/5"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
+        <div className="mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-center text-sm text-muted-foreground mb-4 font-medium">
+            ⬇ Selecione aqui seu tipo de imagem ⬇
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-8 py-3 rounded-full text-sm font-semibold transition-all border-2 ${
+                  selectedCategory === category.id
+                    ? "bg-primary text-primary-foreground border-primary shadow-glow scale-105"
+                    : "bg-card text-foreground border-border hover:border-primary hover:scale-105 shadow-soft"
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Gallery Grid */}
