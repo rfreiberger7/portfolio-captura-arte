@@ -27,6 +27,12 @@ const Hero = () => {
     return visible;
   };
 
+  const getObjectPosition = (src: string) => (
+    src.includes('gestante-16.jpg') || src.includes('gestante-82.jpg')
+      ? 'top center'
+      : 'center'
+  );
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-32 pb-20">
       <div className="container mx-auto px-4">
@@ -47,7 +53,7 @@ const Hero = () => {
                   alt={item.title}
                   loading="lazy"
                   className="w-full h-full object-cover block"
-                  style={{ objectPosition: 'top center' }}
+                  style={{ objectPosition: getObjectPosition(item.image) }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent flex items-end justify-center pb-8">
                   <a
