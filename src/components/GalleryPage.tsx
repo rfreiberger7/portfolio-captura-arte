@@ -26,15 +26,19 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Header */}
       <section className="pt-32 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center mb-8">
+          {/* Botão Voltar - Destacado no topo */}
+          <div className="mb-8">
             <button
               onClick={() => navigate('/')}
-              className="mb-6 flex items-center gap-2 px-6 py-3 bg-background text-foreground border-2 border-border rounded-lg hover:bg-primary/10 hover:border-primary font-semibold"
+              className="flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg shadow-lg hover:bg-primary/90 border-2 border-primary"
+              style={{ transform: 'none' }}
             >
-              <ArrowLeft className="h-5 w-5" />
-              Voltar ao Portfólio
+              <ArrowLeft className="h-6 w-6" />
+              ← Voltar ao Portfólio
             </button>
-            
+          </div>
+
+          <div className="flex flex-col items-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in text-center">
               {title}
             </h1>
@@ -47,7 +51,8 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-card border border-border text-foreground rounded-full hover:border-primary transition-all shadow-soft hover:shadow-glow"
+                className="flex items-center gap-2 px-6 py-3 bg-card border-2 border-border text-foreground rounded-lg hover:border-primary"
+                style={{ transition: 'none', transform: 'none' }}
               >
                 <Instagram className="h-5 w-5" />
                 Ver no Instagram
@@ -57,26 +62,29 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* Gallery Grid - Layout Mosaico Desktop */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {images.map((image, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-glow transition-all duration-500 cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
                 onClick={() => setLightboxImage(image)}
+                style={{ 
+                  height: '300px',
+                  transition: 'none',
+                  transform: 'none'
+                }}
               >
-              <div className="aspect-[3/4] overflow-hidden bg-background">
-                  <img
-                    src={image}
-                    alt={`${title} - Foto ${index + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 block"
-                  />
-                </div>
+                <img
+                  src={image}
+                  alt={`${title} - Foto ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center block"
+                  style={{ transition: 'none', transform: 'none' }}
+                />
                 
                 {/* Marca d'água - Studio Manu Fotografias */}
                 <div className="absolute bottom-4 right-4 text-white/80 text-xs font-light bg-background/20 backdrop-blur-sm px-2 py-1 rounded">

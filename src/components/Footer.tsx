@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 text-center">
-        <img src={logoImg} alt="Studio Manu Fotografias - Fotografia Profissional" className="h-20 w-auto mx-auto mb-6" />
+        <img 
+          src={logoImg} 
+          alt="Studio Manu Fotografias - Fotografia Profissional" 
+          className="h-20 w-20 rounded-full object-cover mx-auto mb-6" 
+        />
         <div className="flex justify-center gap-4 mb-6">
           <a 
             href="https://www.instagram.com/studio.manufotografias/" 

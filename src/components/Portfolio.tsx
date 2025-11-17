@@ -118,18 +118,34 @@ const Portfolio = () => {
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
 
-        {/* Category Filter - Redesenhado */}
-        <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+        {/* Category Filter - Destacado e Sem Animações */}
+        <div className="mb-12">
+          {/* Label do Filtro - Bem Evidente */}
+          <div className="text-center mb-6">
+            <p className="text-xl font-bold text-foreground mb-2">
+              📸 Selecione o tipo de ensaio ➝
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Filtre por Categoria:
+            </p>
+          </div>
+          
+          {/* Botões de Filtro - Sem Efeitos */}
+          <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-2.5 rounded-md text-sm font-medium border ${
+                className={`px-8 py-4 rounded-lg text-base font-bold border-2 shadow-md ${
                   selectedCategory === category.id
                     ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-background text-foreground border-border hover:bg-primary/10 hover:border-primary/50"
+                    : "bg-card text-foreground border-border"
                 }`}
+                style={{ 
+                  transition: 'none',
+                  transform: 'none !important',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                }}
               >
                 {category.label}
               </button>
