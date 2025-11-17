@@ -46,7 +46,7 @@ const Navbar = () => {
           <img 
             src={logoImg} 
             alt="Studio Manu Fotografias - Fotografia Profissional" 
-            className="h-20 w-20 rounded-full object-cover transition-opacity hover:opacity-80"
+            className="h-16 w-16 rounded-2xl object-cover transition-opacity hover:opacity-80"
           />
             </a>
           </div>
