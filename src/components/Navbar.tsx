@@ -6,6 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const isGalleryPage = window.location.pathname === '/galeria';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,12 +26,12 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const menuItems = [
-    { label: "Início", href: "#home" },
-    { label: "Sobre", href: "#about" },
-    { label: "Portfólio", href: "#portfolio" },
-    { label: "Serviços", href: "#services" },
-    { label: "Pagamento", href: "#payment" },
-    { label: "Contato", href: "#contact" },
+    { label: "Início", href: isGalleryPage ? "/#home" : "#home" },
+    { label: "Sobre", href: isGalleryPage ? "/#about" : "#about" },
+    { label: "Portfólio", href: isGalleryPage ? "/#portfolio" : "#portfolio" },
+    { label: "Serviços", href: isGalleryPage ? "/#services" : "#services" },
+    { label: "Pagamento", href: isGalleryPage ? "/#payment" : "#payment" },
+    { label: "Contato", href: isGalleryPage ? "/#contact" : "#contact" },
   ];
 
   return (
@@ -45,7 +46,7 @@ const Navbar = () => {
           <img 
             src={logoImg} 
             alt="Studio Manu Fotografias - Fotografia Profissional" 
-            className="h-16 w-16 rounded-full object-cover transition-opacity hover:opacity-80"
+            className="h-20 w-20 rounded-full object-cover transition-opacity hover:opacity-80"
           />
             </a>
           </div>
