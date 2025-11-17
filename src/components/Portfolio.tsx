@@ -136,15 +136,16 @@ const Portfolio = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-8 py-4 rounded-lg text-base font-bold border-2 shadow-md ${
+                className={`px-8 py-4 rounded-lg text-base font-bold border-2 ${
                   selectedCategory === category.id
                     ? "bg-primary text-primary-foreground border-primary"
                     : "bg-card text-foreground border-border"
                 }`}
                 style={{ 
                   transition: 'none',
-                  transform: 'none !important',
-                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                  transform: 'none',
+                  animation: 'none',
+                  boxShadow: 'none'
                 }}
               >
                 {category.label}
