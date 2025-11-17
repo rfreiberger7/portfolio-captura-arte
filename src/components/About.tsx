@@ -13,12 +13,12 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="relative animate-fade-in">
-            <div className="relative overflow-hidden rounded-2xl shadow-glow w-full md:max-w-[420px] mx-auto bg-background flex items-center justify-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-glow w-full md:max-w-[420px] mx-auto flex items-center justify-center">
               <img 
                 src={manuPhoto} 
                 alt="Manu - Fotógrafa profissional especializada em ensaios femininos, newborn e eventos" 
                 loading="lazy" 
-                className="w-full h-auto object-contain aspect-[4/5] block" 
+                className="w-full h-auto object-cover object-center aspect-[4/5] block rounded-2xl" 
               />
             </div>
           </div>
