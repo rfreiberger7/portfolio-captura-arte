@@ -65,7 +65,7 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Gallery Grid - Layout Mosaico Desktop */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {images.map((image, index) => (
               <div
                 key={index}
@@ -74,7 +74,8 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                 style={{ 
                   height: '300px',
                   transition: 'none',
-                  transform: 'none'
+                  transform: 'none',
+                  animation: 'none'
                 }}
               >
                 <img
