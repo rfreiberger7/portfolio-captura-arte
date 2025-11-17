@@ -26,12 +26,11 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
       {/* Header */}
       <section className="pt-32 pb-12 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          {/* Botão Voltar - Destacado no topo */}
+          {/* Botão Voltar */}
           <div className="mb-8">
             <button
               onClick={() => navigate('/')}
               className="flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg shadow-lg hover:bg-primary/90 border-2 border-primary"
-              style={{ transform: 'none' }}
             >
               <ArrowLeft className="h-6 w-6" />
               ← Voltar ao Portfólio
@@ -52,7 +51,6 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-card border-2 border-border text-foreground rounded-lg hover:border-primary"
-                style={{ transition: 'none', transform: 'none' }}
               >
                 <Instagram className="h-5 w-5" />
                 Ver no Instagram
@@ -62,39 +60,25 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
         </div>
       </section>
 
-      {/* Gallery Grid - Layout Estilo Instagram */}
+      {/* Gallery Grid - Estilo Instagram */}
       <section className="py-12">
-        <div className="container mx-auto px-4">
-          {/* Grid responsivo: 2 colunas mobile, 4 colunas desktop */}
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+        <div className="w-full px-2">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-2">
             {images.map((image, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden cursor-pointer"
+                className="aspect-square w-full overflow-hidden cursor-pointer"
                 onClick={() => setLightboxImage(image)}
-                style={{ 
-                  aspectRatio: '1/1',
-                  transition: 'none',
-                  transform: 'none',
-                  animation: 'none'
-                }}
               >
                 <img
                   src={image}
                   alt={`${title} - Foto ${index + 1}`}
                   loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover block"
-                  style={{ 
-                    transition: 'none', 
-                    transform: 'none',
-                    objectFit: 'cover',
-                    objectPosition: 'center'
-                  }}
+                  className="object-cover w-full h-full"
                 />
                 
-                {/* Marca d'água - Studio Manu Fotografias */}
-                <div className="absolute bottom-2 right-2 text-white/80 text-xs font-light bg-background/20 backdrop-blur-sm px-2 py-1 rounded">
+                {/* Marca d'água */}
+                <div className="absolute bottom-1 right-1 text-white/80 text-[10px] font-light bg-background/20 backdrop-blur-sm px-1.5 py-0.5 rounded">
                   Studio Manu Fotografias
                 </div>
               </div>
