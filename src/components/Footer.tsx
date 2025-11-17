@@ -1,11 +1,11 @@
 import { Heart, Instagram, Mail, Phone } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-studio-manu.png";
 
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
       <div className="container mx-auto px-4 text-center">
-        <img src={logoImg} alt="Studio Manu Fotografias" className="h-16 w-auto mx-auto mb-6" />
+        <img src={logoImg} alt="Studio Manu Fotografias - Fotografia Profissional" className="h-20 w-auto mx-auto mb-6" />
         <div className="flex justify-center gap-4 mb-6">
           <a 
             href="https://www.instagram.com/studio.manufotografias/" 
