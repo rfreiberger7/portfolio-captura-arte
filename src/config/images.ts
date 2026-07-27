@@ -247,6 +247,8 @@ export const portfolioImages = {
     newbornN1jpg, newbornN1png, newbornN2, newbornN3, newbornN4, newbornN5,
     newbornN6, newbornN7, newbornN8, newbornN9, newbornN10, newbornN11,
     newbornN12, newbornN13, newbornN14, newbornN15, newbornN16, newbornN17, newbornN18,
+    newbornCdn1.url, newbornCdn3.url, newbornCdn6.url, newbornCdn7.url, newbornCdn8.url,
+    newbornCdn9.url, newbornCdn10.url, newbornCdn12.url, newbornCdn13.url, newbornCdn18.url,
   ],
   gestante: [
     gestante16Img, gestante13Img, gestante82Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img,
