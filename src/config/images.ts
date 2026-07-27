@@ -76,6 +76,18 @@ import gestanteCdn15b from "@/assets/Gestante_15-2.jpg.asset.json";
 import gestanteCdn16c from "@/assets/Gestante_16-3.jpg.asset.json";
 import gestanteCdn19b from "@/assets/Gestante_19-2.jpg.asset.json";
 
+// === NOVAS (CDN) - Newborn ===
+import newbornCdn1 from "@/assets/Newborn_1.jpg.asset.json";
+import newbornCdn3 from "@/assets/Newborn_3.jpg.asset.json";
+import newbornCdn6 from "@/assets/Newborn_6.jpg.asset.json";
+import newbornCdn7 from "@/assets/Newborn_7.jpg.asset.json";
+import newbornCdn8 from "@/assets/Newborn_8.jpg.asset.json";
+import newbornCdn9 from "@/assets/Newborn_9.jpg.asset.json";
+import newbornCdn10 from "@/assets/Newborn_10.jpg.asset.json";
+import newbornCdn12 from "@/assets/Newborn_12.jpg.asset.json";
+import newbornCdn13 from "@/assets/Newborn_13.jpg.asset.json";
+import newbornCdn18 from "@/assets/Newborn_18.jpg.asset.json";
+
 // === NEWBORN ===
 import newborn4Img from "@/assets/newborn-4.jpg";
 import newborn17Img from "@/assets/newborn-17.jpg";
@@ -235,6 +247,8 @@ export const portfolioImages = {
     newbornN1jpg, newbornN1png, newbornN2, newbornN3, newbornN4, newbornN5,
     newbornN6, newbornN7, newbornN8, newbornN9, newbornN10, newbornN11,
     newbornN12, newbornN13, newbornN14, newbornN15, newbornN16, newbornN17, newbornN18,
+    newbornCdn1.url, newbornCdn3.url, newbornCdn6.url, newbornCdn7.url, newbornCdn8.url,
+    newbornCdn9.url, newbornCdn10.url, newbornCdn12.url, newbornCdn13.url, newbornCdn18.url,
   ],
   gestante: [
     gestante16Img, gestante13Img, gestante82Img, gestante71Img, gestante28Img, gestante19Img, gestante2Img,
