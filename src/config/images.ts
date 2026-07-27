@@ -65,6 +65,17 @@ import femininoCdn5 from "@/assets/Feminino_5.JPG.asset.json";
 import formaturaCdn4b from "@/assets/Formatura_4-2.jpg.asset.json";
 import formaturaCdn5 from "@/assets/Formatura_5.jpg.asset.json";
 
+// === NOVAS (CDN) - Gestante ===
+import gestanteCdn1 from "@/assets/Gestante_1.webp.asset.json";
+import gestanteCdn2 from "@/assets/Gestante_2.webp.asset.json";
+import gestanteCdn7 from "@/assets/Gestante_7.JPG.asset.json";
+import gestanteCdn9 from "@/assets/Gestante_9.jpg.asset.json";
+import gestanteCdn10 from "@/assets/Gestante_10.jpg.asset.json";
+import gestanteCdn13 from "@/assets/Gestante_13.JPG.asset.json";
+import gestanteCdn15b from "@/assets/Gestante_15-2.jpg.asset.json";
+import gestanteCdn16c from "@/assets/Gestante_16-3.jpg.asset.json";
+import gestanteCdn19b from "@/assets/Gestante_19-2.jpg.asset.json";
+
 // === NEWBORN ===
 import newborn4Img from "@/assets/newborn-4.jpg";
 import newborn17Img from "@/assets/newborn-17.jpg";
