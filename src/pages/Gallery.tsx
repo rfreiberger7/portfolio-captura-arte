@@ -99,14 +99,25 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [lightboxImage, setLightboxImage] = useState<typeof portfolioItems[0] | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+  const [brokenImages, setBrokenImages] = useState<Set<string>>(new Set());
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  const handleImageLoad = (id: string) => {
+  const handleImageLoad = (id: string, e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    // Esconder stubs 1x1 (fotos que não estão no ambiente)
+    if (img.naturalWidth <= 2 && img.naturalHeight <= 2) {
+      setBrokenImages(prev => new Set(prev).add(id));
+      return;
+    }
     setLoadedImages(prev => new Set(prev).add(id));
+  };
+
+  const handleImageError = (id: string) => {
+    setBrokenImages(prev => new Set(prev).add(id));
   };
 
   const handleBack = () => {
@@ -117,9 +128,10 @@ const Gallery = () => {
     }
   };
 
-  const filteredItems = selectedCategory === "all" 
-    ? portfolioItems 
+  const baseItems = selectedCategory === "all"
+    ? portfolioItems
     : portfolioItems.filter(item => item.category === selectedCategory);
+  const filteredItems = baseItems.filter(item => !brokenImages.has(item.id));
 
   return (
     <div className="min-h-screen bg-background">
