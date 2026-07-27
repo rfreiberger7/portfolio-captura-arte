@@ -58,6 +58,13 @@ import formaturaN6 from "@/assets/Formatura (6).jpg";
 import formaturaN7 from "@/assets/Formatura (7).jpg";
 import formaturaN8 from "@/assets/Formatura (8).jpg";
 
+// === NOVAS (CDN) - Feminino & Formatura ===
+import femininoCdn1 from "@/assets/Feminino_1.png.asset.json";
+import femininoCdn4 from "@/assets/Feminino_4.JPG.asset.json";
+import femininoCdn5 from "@/assets/Feminino_5.JPG.asset.json";
+import formaturaCdn4b from "@/assets/Formatura_4-2.jpg.asset.json";
+import formaturaCdn5 from "@/assets/Formatura_5.jpg.asset.json";
+
 // === NEWBORN ===
 import newborn4Img from "@/assets/newborn-4.jpg";
 import newborn17Img from "@/assets/newborn-17.jpg";
@@ -254,9 +261,11 @@ export const portfolioImages = {
   formatura: [
     formatura4Img,
     formaturaN1, formaturaN2, formaturaN4, formaturaN5, formaturaN6, formaturaN7, formaturaN8,
+    formaturaCdn4b.url, formaturaCdn5.url,
   ],
   feminino: [
     feminino4Img, feminino13Img,
     femininoN1, femininoN2, femininoN3, femininoN4, femininoN5, femininoN6, femininoN7, femininoN8,
+    femininoCdn1.url, femininoCdn4.url, femininoCdn5.url,
   ],
 };
