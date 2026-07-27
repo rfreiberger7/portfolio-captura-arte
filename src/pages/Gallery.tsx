@@ -198,7 +198,8 @@ const Gallery = () => {
                   className={`w-full h-full object-cover ${
                     loadedImages.has(item.id) ? 'opacity-100' : 'opacity-0'
                   }`}
-                  onLoad={() => handleImageLoad(item.id)}
+                  onLoad={(e) => handleImageLoad(item.id, e)}
+                  onError={() => handleImageError(item.id)}
                 />
               </div>
             ))}
