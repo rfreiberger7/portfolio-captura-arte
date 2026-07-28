@@ -280,6 +280,8 @@ export const portfolioImages = {
     gestanteN17, gestanteN18, gestanteN19, gestanteN20, gestanteN21, gestanteN22,
     gestanteCdn1.url, gestanteCdn2.url, gestanteCdn7.url, gestanteCdn9.url, gestanteCdn10.url,
     gestanteCdn13.url, gestanteCdn15b.url, gestanteCdn16c.url, gestanteCdn19b.url,
+    gestanteCdn1b.url, gestanteCdn1c.url, gestanteCdn2b.url, gestanteCdn3.url, gestanteCdn3b.url,
+    gestanteCdn5.url, gestanteCdn9c.url, gestanteCdn11.url, gestanteCdn12.url, gestanteCdn20.url,
   ],
   mesversario: [
     mesversarioImg, mesversario2Img, mesversario4Img, mesversario98Img, mesversario109Img, mesversario146Img,
