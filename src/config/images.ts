@@ -75,6 +75,16 @@ import gestanteCdn13 from "@/assets/Gestante_13.JPG.asset.json";
 import gestanteCdn15b from "@/assets/Gestante_15-2.jpg.asset.json";
 import gestanteCdn16c from "@/assets/Gestante_16-3.jpg.asset.json";
 import gestanteCdn19b from "@/assets/Gestante_19-2.jpg.asset.json";
+import gestanteCdn1b from "@/assets/Gestante_1.jpg.asset.json";
+import gestanteCdn1c from "@/assets/Gestante_1-2.webp.asset.json";
+import gestanteCdn2b from "@/assets/Gestante_2.jpg.asset.json";
+import gestanteCdn3 from "@/assets/Gestante_3.jpg.asset.json";
+import gestanteCdn3b from "@/assets/Gestante_3.webp.asset.json";
+import gestanteCdn5 from "@/assets/Gestante_5.jpg.asset.json";
+import gestanteCdn9c from "@/assets/Gestante_9-2.jpg.asset.json";
+import gestanteCdn11 from "@/assets/Gestante_11.jpg.asset.json";
+import gestanteCdn12 from "@/assets/Gestante_12.jpg.asset.json";
+import gestanteCdn20 from "@/assets/Gestante_20.jpg.asset.json";
 
 // === NOVAS (CDN) - Newborn ===
 import newbornCdn1 from "@/assets/Newborn_1.jpg.asset.json";
