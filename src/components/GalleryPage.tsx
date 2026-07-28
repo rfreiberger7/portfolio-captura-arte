@@ -67,16 +67,17 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="aspect-square w-full overflow-hidden cursor-pointer"
+                className="relative aspect-square w-full overflow-hidden cursor-pointer"
                 onClick={() => setLightboxImage(image)}
               >
                 <img
                   src={image}
                   alt={`${title} - Foto ${index + 1}`}
                   loading="lazy"
+                  decoding="async"
                   className="object-cover w-full h-full"
                 />
-                
+
                 {/* Marca d'água */}
                 <div className="absolute bottom-1 right-1 text-white/80 text-[10px] font-light bg-background/20 backdrop-blur-sm px-1.5 py-0.5 rounded">
                   Studio Manu Fotografias
@@ -84,6 +85,20 @@ const GalleryPage = ({ title, images, instagramUrl }: GalleryPageProps) => {
               </div>
             ))}
           </div>
+
+          {instagramUrl && (
+            <div className="flex justify-center mt-12">
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full font-semibold shadow-lg"
+              >
+                <Instagram className="h-6 w-6" />
+                Siga @studio.manufotografias no Instagram
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
