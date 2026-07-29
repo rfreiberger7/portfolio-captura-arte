@@ -1,4 +1,4 @@
-import { MessageCircle, Mail, Phone } from "lucide-react";
+import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -37,6 +37,30 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-2 text-foreground">Instagram</h3>
             <p className="text-muted-foreground hover:text-primary transition-colors">@studio.manufotografias</p>
           </a>
+        </div>
+
+        <div className="max-w-5xl mx-auto mb-12">
+          <a
+            href="https://www.google.com/maps/place/Studio+Manu+Fotografias/@-25.440985,-49.2716008,17z/data=!4m6!3m5!1s0x94dce341b205868d:0xb6286ecbe681f837!8m2!3d-25.440985!4d-49.2716008!16s%2Fg%2F11t4y648xp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 text-foreground hover:text-primary transition-colors mb-4"
+          >
+            <MapPin className="h-5 w-5 text-primary" />
+            <span className="font-semibold">Studio Manu Fotografias — Curitiba, PR</span>
+          </a>
+          <div className="rounded-2xl overflow-hidden shadow-soft aspect-[16/9]">
+            <iframe
+              title="Localização Studio Manu Fotografias"
+              src="https://www.google.com/maps?q=Studio+Manu+Fotografias,+Curitiba,+PR&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
 
         <div className="text-center">
