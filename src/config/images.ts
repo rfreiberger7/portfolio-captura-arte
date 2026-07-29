@@ -62,8 +62,18 @@ import formaturaN8 from "@/assets/Formatura (8).jpg";
 import femininoCdn1 from "@/assets/Feminino_1.png.asset.json";
 import femininoCdn4 from "@/assets/Feminino_4.JPG.asset.json";
 import femininoCdn5 from "@/assets/Feminino_5.JPG.asset.json";
+import femininoCdn2c from "@/assets/Feminino_2-3.jpg.asset.json";
+import femininoCdn3b from "@/assets/Feminino_3-2.jpg.asset.json";
+import femininoCdn4b from "@/assets/Feminino_4-2.JPG.asset.json";
+import femininoCdn6b from "@/assets/Feminino_6-2.jpg.asset.json";
+import femininoCdn8b from "@/assets/Feminino_8-2.jpg.asset.json";
+import femininoCdn9b from "@/assets/Feminino_9-2.jpg.asset.json";
 import formaturaCdn4b from "@/assets/Formatura_4-2.jpg.asset.json";
 import formaturaCdn5 from "@/assets/Formatura_5.jpg.asset.json";
+import formaturaCdn1 from "@/assets/Formatura_1.jpg.asset.json";
+import formaturaCdn2 from "@/assets/Formatura_2.JPG.asset.json";
+import formaturaCdn3 from "@/assets/Formatura_3.JPG.asset.json";
+import formaturaCdn4c from "@/assets/Formatura_4-3.jpg.asset.json";
 
 // === NOVAS (CDN) - Gestante ===
 import gestanteCdn1 from "@/assets/Gestante_1.webp.asset.json";
