@@ -323,10 +323,13 @@ export const portfolioImages = {
     formatura4Img,
     formaturaN1, formaturaN2, formaturaN4, formaturaN5, formaturaN6, formaturaN7, formaturaN8,
     formaturaCdn4b.url, formaturaCdn5.url,
+    formaturaCdn1.url, formaturaCdn2.url, formaturaCdn3.url, formaturaCdn4c.url,
   ],
   feminino: [
     feminino4Img, feminino13Img,
     femininoN1, femininoN2, femininoN3, femininoN4, femininoN5, femininoN6, femininoN7, femininoN8,
     femininoCdn1.url, femininoCdn4.url, femininoCdn5.url,
+    femininoCdn2c.url, femininoCdn3b.url, femininoCdn4b.url,
+    femininoCdn6b.url, femininoCdn8b.url, femininoCdn9b.url,
   ],
 };
