@@ -39,7 +39,16 @@ const Contact = () => {
           </a>
         </div>
 
-        <div className="max-w-5xl mx-auto mb-12">
+        <div className="text-center mb-12">
+          <a href="https://wa.me/5541999791430" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-right-bottom text-primary-foreground px-10 py-6 text-lg rounded-full shadow-glow hover:scale-105 font-bold transition-all duration-300">
+              <MessageCircle className="mr-2 h-6 w-6" />
+              Enviar WhatsApp
+            </Button>
+          </a>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
           <a
             href="https://www.google.com/maps/place/Studio+Manu+Fotografias/@-25.440985,-49.2716008,17z/data=!4m6!3m5!1s0x94dce341b205868d:0xb6286ecbe681f837!8m2!3d-25.440985!4d-49.2716008!16s%2Fg%2F11t4y648xp"
             target="_blank"
@@ -49,7 +58,7 @@ const Contact = () => {
             <MapPin className="h-5 w-5 text-primary" />
             <span className="font-semibold">Studio Manu Fotografias — Curitiba, PR</span>
           </a>
-          <div className="rounded-2xl overflow-hidden shadow-soft aspect-[16/9]">
+          <div className="rounded-2xl overflow-hidden shadow-soft aspect-[16/10]">
             <iframe
               title="Localização Studio Manu Fotografias"
               src="https://www.google.com/maps?q=Studio+Manu+Fotografias,+Curitiba,+PR&output=embed"
@@ -61,15 +70,6 @@ const Contact = () => {
               allowFullScreen
             />
           </div>
-        </div>
-
-        <div className="text-center">
-          <a href="https://wa.me/5541999791430" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] hover:bg-right-bottom text-primary-foreground px-10 py-6 text-lg rounded-full shadow-glow hover:scale-105 font-bold transition-all duration-300">
-              <MessageCircle className="mr-2 h-6 w-6" />
-              Enviar WhatsApp
-            </Button>
-          </a>
         </div>
       </div>
     </section>
